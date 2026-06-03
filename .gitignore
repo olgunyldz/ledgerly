@@ -1,0 +1,14 @@
+node_modules/
+.expo/
+dist/
+build/
+coverage/
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.sqlite3
+uploads/

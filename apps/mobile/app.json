@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "TaxBridge AI",
+    "slug": "taxbridge-ai",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": ["**/*"]
+  }
+}
