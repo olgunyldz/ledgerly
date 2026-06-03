@@ -5,26 +5,55 @@ Multi-language AI assistant for UK self-employed taxpayers, landlords, contracto
 > Working name: **TaxBridge AI**  
 > Goal: Help users understand UK tax in their own language while preserving official English tax terms.
 
-## MVP Scope
+## Product positioning
+
+TaxBridge AI is designed for users who find the UK tax system difficult, especially multilingual users, sole traders, gig workers, freelancers, contractors and landlords. The app helps them organise records, understand tax concepts, estimate tax and prepare accountant-ready summaries.
+
+## Core product principle
+
+**AI explains, classifies and guides. Deterministic rules calculate. High-risk cases escalate to accountant review.**
+
+## MVP scope
 
 - Multi-language onboarding
 - UK tax profile questionnaire
 - Income and expense tracker
 - Receipt/document upload placeholder
 - AI tax assistant interface
-- Tax estimate placeholder powered by a deterministic rules engine
+- Tax estimate powered by deterministic rules
 - Accountant-ready export placeholder
+- Audit trail strategy
+- Source-grounded tax explanations
 
-## Monorepo Structure
+## Monorepo structure
 
 ```text
-apps/mobile      React Native / Expo mobile app
-apps/api         FastAPI backend
-packages/tax-rules  Shared UK tax calculation/rules package
-docs             Product and compliance notes
+apps/mobile          React Native / Expo mobile app
+apps/api             FastAPI backend
+packages/tax-rules   Shared UK tax calculation/rules package
+docs                 Product, architecture, UX, backend, AI and compliance docs
+AGENTS.md            Operating manual for AI agents and contributors
 ```
 
-## Quick Start
+## Documentation map
+
+Start here:
+
+- `AGENTS.md` — agent roles, update rules and definition of done
+- `docs/product/product-requirements.md` — product requirements
+- `docs/architecture/system-architecture.md` — system architecture
+- `docs/ux/screen-map.md` — app screens and navigation
+- `docs/ux/design-system.md` — UX/UI design principles
+- `docs/frontend/mobile-architecture.md` — mobile architecture
+- `docs/backend/backend-architecture.md` — backend architecture
+- `docs/ai/assistant-behaviour.md` — AI assistant safety and behaviour
+- `docs/tax/tax-rules-strategy.md` — deterministic tax rules strategy
+- `docs/roadmap/roadmap.md` — phased roadmap
+- `docs/roadmap/tasks.md` — task backlog
+- `docs/security/security-model.md` — security and privacy model
+- `docs/operations/release-checklist.md` — release checklist
+
+## Quick start
 
 ### Mobile app
 
@@ -52,14 +81,19 @@ npm install
 npm test
 ```
 
-## Important Product Principle
+## Development rules
 
-AI should explain, classify and guide. A rules engine should calculate. High-risk cases should be escalated to an accountant.
-
-## Compliance Notes
-
+- Do not hardcode user-facing strings in mobile screens.
+- Do not put tax logic inside UI components.
+- Do not rely on AI for final tax calculations.
 - Do not submit anything to HMRC without explicit user confirmation.
-- Keep an audit trail for tax calculations and AI answers.
-- Use official UK/HMRC/GOV.UK sources for tax rules.
-- Apply GDPR / UK GDPR data minimisation.
+- Add tests for every tax-rule change.
+- Update relevant docs using the matrix in `AGENTS.md`.
+
+## Compliance notes
+
+- Apply UK GDPR data minimisation.
 - Encrypt sensitive documents and financial data.
+- Maintain audit logs for tax-impacting actions.
+- Use official HMRC/GOV.UK sources for tax rules.
+- Show clear disclaimers and accountant escalation for high-risk scenarios.

@@ -1,0 +1,37 @@
+# Test Strategy
+
+## Test pyramid
+
+- Unit tests: tax rules, pure helpers, validators.
+- Service tests: backend workflows without HTTP.
+- API tests: endpoint contracts and auth boundaries.
+- Mobile tests: critical hooks, forms and navigation.
+- E2E tests: onboarding, add expense, estimate, assistant question.
+
+## Tax rules tests
+
+Required:
+
+- threshold boundary tests
+- tax-year regression fixtures
+- scenario snapshots
+- invalid input tests
+
+## AI tests
+
+Required:
+
+- source-grounded answer tests
+- calculation tool-call tests
+- multilingual response tests
+- high-risk escalation tests
+- hallucination trap tests
+
+## Manual QA checklist
+
+- Small screen device.
+- Large screen device.
+- Slow network.
+- Offline state.
+- Long translated strings.
+- Dark mode when supported.

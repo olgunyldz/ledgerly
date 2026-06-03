@@ -1,35 +1,29 @@
 # Product Brief
 
-## Positioning
+## Name
 
-TaxBridge AI is a multi-language UK tax assistant for immigrants, self-employed workers, landlords and small businesses.
+TaxBridge AI
 
-## Primary Users
+## One-liner
 
-1. Self-employed couriers and drivers
-2. Freelancers and contractors
-3. Landlords
-4. Small business owners
-5. Users who prepare records before sending them to an accountant
+A multi-language UK tax assistant that helps users understand, organise and prepare their tax information while preserving official English tax terms.
 
-## Core Promise
+## Target users
 
-Understand UK tax in your own language, while learning the official English tax terms used by HMRC and accountants.
+- UK self-employed workers
+- Gig economy drivers and couriers
+- Freelancers and contractors
+- Small landlords
+- Multilingual users who need tax explanations in their own language
 
-## MVP Features
+## Differentiation
 
-- User tax profile
-- Income and expense tracking
-- Receipt/document upload
-- AI assistant with multilingual answers
-- UK tax terms glossary
-- Tax estimate dashboard
-- Accountant pack export
+Most tax tools assume the user is comfortable with English tax terminology. TaxBridge AI explains UK tax in the user's language, keeps official English terms visible, and creates accountant-ready summaries.
 
-## Suggested Launch Languages
+## MVP promise
 
-1. English
-2. Turkish
-3. Arabic
-4. Urdu
-5. Polish
+“Understand what to record, estimate what to set aside, and prepare a clean pack for your accountant.”
+
+## Strategic wedge
+
+Start with English + Turkish for self-employed users, then expand to Arabic, Urdu, Polish, Romanian, Bulgarian and Hindi.
