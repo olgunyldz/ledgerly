@@ -258,12 +258,12 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E5-F1 — Assistant UI
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Build `Assistant` chat screen.
-- [ ] Add suggested starter questions.
-- [ ] Show source chips in responses.
-- [ ] Show high-risk escalation prompt.
+- [x] Build `Assistant` chat screen.
+- [x] Add suggested starter questions.
+- [x] Show source chips in responses.
+- [x] Show high-risk escalation prompt.
 
 ### E5-F2 — Assistant Backend
 

@@ -44,11 +44,11 @@ Ledgerly's first build should prioritise a complete, narrow loop over broad feat
 
 ## Ask tax question
 
-1. User asks in their preferred language.
-2. Assistant identifies intent and risk.
-3. Assistant retrieves approved tax sources.
-4. If calculation is needed, backend calls tax rules engine.
-5. Assistant answers with English tax terms and sources.
+1. User opens `Assistant`.
+2. App shows suggested starter questions and a source-grounded answer preview.
+3. App shows source chips and preserves official English tax terms.
+4. App explains that high-risk topics require accountant review.
+5. Future backend flow identifies intent and risk, retrieves approved tax sources and calls deterministic tools for calculations.
 6. High-risk answers show accountant review prompt.
 
 ## Upload receipt

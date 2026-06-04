@@ -14,6 +14,16 @@ The assistant helps users understand UK tax, organise records and prepare questi
 - Say when information is missing.
 - Recommend accountant review for high-risk cases.
 
+## Mobile UI baseline
+
+The first `Assistant` screen is a safe UI preview, not a live LLM chat. It must:
+
+- Show suggested starter questions.
+- Show source chips in the answer preview.
+- Explain that answers are cautious and source-grounded.
+- Show an accountant review prompt for high-risk topics.
+- Avoid collecting free-form tax data until backend guardrails are connected.
+
 ## Risk levels
 
 ### Low
