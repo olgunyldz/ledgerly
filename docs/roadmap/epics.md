@@ -193,9 +193,9 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E3-F1 — Income Records
 
-**Status:** In Progress
+**Status:** Done
 
-- [ ] Add income list section to `Transactions`.
+- [x] Add income list section to `Transactions`.
 - [x] Build `AddIncome` form.
 - [x] Validate amount, date, source and tax year.
 - [x] Show confirmation summary before save.

@@ -37,7 +37,8 @@ Ledgerly's first build should prioritise a complete, narrow loop over broad feat
 4. User reviews a human-readable summary.
 5. User saves income as confirmed.
 6. Dashboard income card updates with record count and total.
-7. Tax estimate remains cautious until deterministic estimate logic is connected.
+7. User can open `Transactions` to review saved income records, totals and notes.
+8. Tax estimate remains cautious until deterministic estimate logic is connected.
 
 ## Ask tax question
 

@@ -39,10 +39,11 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Dashboard next-best-action logic added from local profile state.
 - AddIncome form saves local income records with validation and review summary.
 - Dashboard income card reflects local income record count and total.
+- Transactions shows saved local income records, empty state and income total.
 
 ### Next
 
-- Add income list section to `Transactions`.
+- Start `E3-F2`: Expense Records.
 - Add CI lint and test commands.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 

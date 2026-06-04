@@ -67,7 +67,7 @@ export function DashboardScreen({ navigation }: DashboardScreenProps) {
 
       <Text style={styles.sectionTitle}>{t('dashboardCards')}</Text>
       <View style={styles.cardGrid}>
-        <Pressable accessibilityRole="button" onPress={() => navigation.navigate('AddIncome')} style={styles.recordCard}>
+        <Pressable accessibilityRole="button" onPress={() => navigation.navigate('Transactions')} style={styles.recordCard}>
           <Text style={styles.recordTitle}>{t('incomeCardTitle')}</Text>
           <Text style={styles.recordBody}>
             {incomeSummary.count > 0
