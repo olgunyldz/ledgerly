@@ -32,3 +32,7 @@ Phase 2:
 - Urdu
 
 Each language needs native review for tax-sensitive copy.
+
+## Baseline fixtures
+
+Initial English and Turkish assistant fixtures live in `docs/ai/evaluation-fixtures/assistant-baseline.json`.

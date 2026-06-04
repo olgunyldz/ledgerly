@@ -31,3 +31,15 @@ Every tax-rule answer should include:
 - assumptions
 - source chips or references
 - next action
+
+## Starter source contract
+
+Assistant responses use source objects with:
+
+- `title`
+- `source_type`
+- `url`
+- `tax_year`
+- `retrieved_at`
+
+Allowed `source_type` values are `govuk`, `hmrc`, `internal_policy` and `accountant_reviewed`.

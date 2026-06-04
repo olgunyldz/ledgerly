@@ -267,12 +267,12 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E5-F2 — Assistant Backend
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Add safe system prompt version.
-- [ ] Add retrieval source contract.
-- [ ] Add refusal and escalation rules.
-- [ ] Add evaluation fixtures for English and Turkish.
+- [x] Add safe system prompt version.
+- [x] Add retrieval source contract.
+- [x] Add refusal and escalation rules.
+- [x] Add evaluation fixtures for English and Turkish.
 
 ## E6 — Accountant Pack
 

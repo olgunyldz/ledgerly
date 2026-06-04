@@ -24,6 +24,17 @@ The first `Assistant` screen is a safe UI preview, not a live LLM chat. It must:
 - Show an accountant review prompt for high-risk topics.
 - Avoid collecting free-form tax data until backend guardrails are connected.
 
+## Backend baseline
+
+The first backend endpoint is deterministic guardrail logic only. It must:
+
+- Return `prompt_version` with every answer.
+- Classify low, medium and high risk topics.
+- Set `escalation_required` for high-risk topics.
+- Set `refused` when a user asks for hidden income, tax avoidance or guaranteed treatment.
+- Return approved source contracts.
+- Avoid LLM-generated tax advice until retrieval, evaluation and refusal tests are connected.
+
 ## Risk levels
 
 ### Low

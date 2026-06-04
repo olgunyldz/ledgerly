@@ -32,14 +32,28 @@ Response:
 
 ```json
 {
-  "message_id": "id",
-  "answer": "...",
+  "message_id": "generated-id",
+  "conversation_id": "optional-id",
+  "answer": "Ledgerly is in safe starter mode...",
   "language": "tr",
   "risk_level": "low",
-  "sources": [],
-  "suggested_actions": []
+  "prompt_version": "assistant-safe-v0.1",
+  "sources": [
+    {
+      "title": "GOV.UK Self Assessment",
+      "source_type": "govuk",
+      "url": "https://www.gov.uk/self-assessment-tax-returns",
+      "tax_year": null,
+      "retrieved_at": null
+    }
+  ],
+  "suggested_actions": [],
+  "escalation_required": false,
+  "refused": false
 }
 ```
+
+The starter assistant backend is deterministic guardrail logic only. It classifies high-risk topics, returns approved starter sources, includes the safe prompt version and recommends accountant review when escalation is required.
 
 ### Tax estimate
 
