@@ -32,11 +32,14 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Selected language and setup-complete state persisted with AsyncStorage.
 - Official English tax terms visibility preference added and persisted.
 - Multilingual copy QA checklist added for onboarding and tax-sensitive copy.
+- Tax profile selections are saved locally before backend persistence exists.
+- Dashboard setup tasks reflect whether the minimum tax profile is ready.
 
 ### Next
 
 - Add CI lint and test commands.
-- Save tax profile locally before backend persistence exists.
+- Add dashboard cards for income, expenses and documents.
+- Add next-best-action logic from profile state.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
 ### Blocked

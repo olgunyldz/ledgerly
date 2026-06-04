@@ -4,11 +4,21 @@ import { useTranslation } from 'react-i18next';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/routes';
 import { colors, radius, spacing, typography } from '../theme/tokens';
+import { getTaxProfile, hasMinimumTaxProfile } from '../lib/taxProfile';
 
 type DashboardScreenProps = NativeStackScreenProps<RootStackParamList, 'Dashboard'>;
 
 export function DashboardScreen({ navigation }: DashboardScreenProps) {
   const { t } = useTranslation();
+  const [isProfileReady, setIsProfileReady] = React.useState(false);
+
+  React.useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      getTaxProfile().then((profile) => setIsProfileReady(hasMinimumTaxProfile(profile)));
+    });
+
+    return unsubscribe;
+  }, [navigation]);
 
   return (
     <ScrollView contentContainerStyle={styles.scrollContent} style={styles.screen}>
@@ -23,7 +33,7 @@ export function DashboardScreen({ navigation }: DashboardScreenProps) {
 
       <View style={styles.card}>
         <Text style={styles.sectionTitle}>{t('setupTasks')}</Text>
-        <Text style={styles.task}>1. {t('taskProfile')}</Text>
+        <Text style={styles.task}>1. {isProfileReady ? t('dashboardProfileReady') : t('dashboardProfileMissing')}</Text>
         <Text style={styles.task}>2. {t('taskIncome')}</Text>
         <Text style={styles.task}>3. {t('taskExpense')}</Text>
       </View>

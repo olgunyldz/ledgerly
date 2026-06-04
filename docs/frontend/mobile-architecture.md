@@ -39,6 +39,7 @@ features/transactions
 - Server state: TanStack Query.
 - Local UI state: React state.
 - Cross-screen app preferences: AsyncStorage via `apps/mobile/src/lib/preferences.ts`.
+- Draft tax profile state: AsyncStorage via `apps/mobile/src/lib/taxProfile.ts` until backend persistence exists.
 - Do not duplicate backend tax calculations in mobile state.
 
 ## Navigation

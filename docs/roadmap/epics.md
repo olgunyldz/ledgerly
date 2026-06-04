@@ -174,7 +174,7 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 - [x] Add `IncomeSources` screen.
 - [x] Add `ExpenseHabits` screen.
 - [x] Add `ReviewProfile` confirmation screen.
-- [ ] Save tax profile locally before backend persistence exists.
+- [x] Save tax profile locally before backend persistence exists.
 
 ### E2-F3 — Starter Dashboard
 
@@ -183,6 +183,7 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 - [x] Add temporary dashboard after setup.
 - [x] Show empty tax estimate state.
 - [x] Show setup task list.
+- [x] Reflect tax profile readiness in setup tasks.
 - [ ] Add dashboard cards for income, expenses and documents.
 - [ ] Add next-best-action logic from profile state.
 
