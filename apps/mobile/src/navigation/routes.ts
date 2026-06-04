@@ -22,7 +22,7 @@ export type RootStackParamList = {
   Settings: undefined;
 };
 
-export const firstRunRouteOrder: Array<keyof RootStackParamList> = [
+export const firstRunRouteOrder = [
   'Splash',
   'Welcome',
   'LanguageSelect',
@@ -34,9 +34,9 @@ export const firstRunRouteOrder: Array<keyof RootStackParamList> = [
   'ExpenseHabits',
   'ReviewProfile',
   'Dashboard',
-];
+] as const satisfies ReadonlyArray<keyof RootStackParamList>;
 
-export const primaryAppRoutes: Array<keyof RootStackParamList> = [
+export const primaryAppRoutes = [
   'Dashboard',
   'Assistant',
   'Transactions',
@@ -48,4 +48,4 @@ export const primaryAppRoutes: Array<keyof RootStackParamList> = [
   'AccountantPack',
   'Deadlines',
   'Settings',
-];
+] as const satisfies ReadonlyArray<keyof RootStackParamList>;

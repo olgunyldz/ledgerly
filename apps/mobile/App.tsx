@@ -2,6 +2,7 @@ import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
 import './src/i18n/config';
 import { HomeScreen } from './src/screens/HomeScreen';
+import { colors } from './src/theme/tokens';
 
 export default function App() {
   return (
@@ -14,6 +15,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f7f7f8'
+    backgroundColor: colors.paper
   }
 });
