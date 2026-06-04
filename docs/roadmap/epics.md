@@ -108,7 +108,16 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### Known Bugs
 
-No known bugs currently tracked.
+#### BUG-001 — Expo transitive `uuid` moderate advisory
+
+| Field | Value |
+|---|---|
+| Status | Deferred |
+| Severity | Medium |
+| Source | Agent discovery via `npm audit --audit-level=moderate` |
+| Affected area | Mobile |
+| Summary | `expo` pulls a transitive `uuid <11.1.1` advisory through `@expo/config-plugins` -> `xcode`; npm reports 10 moderate vulnerabilities. |
+| Next step | Re-check after Expo dependency policy is pinned; do not run `npm audit fix --force` because npm proposes a breaking Expo change. |
 
 ## E1 — Product Identity and UX Foundation
 
@@ -134,12 +143,12 @@ No known bugs currently tracked.
 
 ### E1-F3 — Navigation Shell
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Replace temporary screen state with React Navigation stack.
-- [ ] Add screen files for each first-run route.
-- [ ] Add persistent setup-complete state.
-- [ ] Add route-level accessibility titles.
+- [x] Replace temporary screen state with React Navigation stack.
+- [x] Add screen files for each first-run route.
+- [x] Add persistent setup-complete state.
+- [x] Add route-level accessibility titles.
 
 ## E2 — Onboarding and Tax Profile
 
@@ -147,35 +156,36 @@ No known bugs currently tracked.
 
 ### E2-F1 — Language Selection
 
-**Status:** In Progress
+**Status:** Done
 
 - [x] Add English and Turkish onboarding copy.
 - [x] Add temporary language selection step.
-- [ ] Persist selected language.
-- [ ] Add official English tax terms visibility preference.
-- [ ] Add multilingual copy QA checklist.
+- [x] Persist selected language.
+- [x] Add official English tax terms visibility preference.
+- [x] Add multilingual copy QA checklist.
 
 ### E2-F2 — Tax Profile Questionnaire
 
-**Status:** Todo
+**Status:** In Progress
 
-- [ ] Add `TaxProfileIntro` screen.
-- [ ] Add `ResidencyTaxYear` screen.
-- [ ] Add `WorkType` screen.
-- [ ] Add `IncomeSources` screen.
-- [ ] Add `ExpenseHabits` screen.
-- [ ] Add `ReviewProfile` confirmation screen.
-- [ ] Save tax profile locally before backend persistence exists.
+- [x] Add `TaxProfileIntro` screen.
+- [x] Add `ResidencyTaxYear` screen.
+- [x] Add `WorkType` screen.
+- [x] Add `IncomeSources` screen.
+- [x] Add `ExpenseHabits` screen.
+- [x] Add `ReviewProfile` confirmation screen.
+- [x] Save tax profile locally before backend persistence exists.
 
 ### E2-F3 — Starter Dashboard
 
-**Status:** In Progress
+**Status:** Done
 
 - [x] Add temporary dashboard after setup.
 - [x] Show empty tax estimate state.
 - [x] Show setup task list.
-- [ ] Add dashboard cards for income, expenses and documents.
-- [ ] Add next-best-action logic from profile state.
+- [x] Reflect tax profile readiness in setup tasks.
+- [x] Add dashboard cards for income, expenses and documents.
+- [x] Add next-best-action logic from profile state.
 
 ## E3 — Records and Documents
 
@@ -300,10 +310,10 @@ No known bugs currently tracked.
 
 ### E7-F2 — QA and Release
 
-**Status:** Todo
+**Status:** In Progress
 
-- [ ] Install mobile dependencies.
-- [ ] Restore `npm run typecheck`.
+- [x] Install mobile dependencies.
+- [x] Restore `npm run typecheck`.
 - [ ] Add CI lint and test commands.
 - [ ] Add private beta release checklist.
 

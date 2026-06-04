@@ -38,8 +38,18 @@ features/transactions
 
 - Server state: TanStack Query.
 - Local UI state: React state.
-- Cross-screen app preferences: lightweight store only if needed.
+- Cross-screen app preferences: AsyncStorage via `apps/mobile/src/lib/preferences.ts`.
+- Draft tax profile state: AsyncStorage via `apps/mobile/src/lib/taxProfile.ts` until backend persistence exists.
 - Do not duplicate backend tax calculations in mobile state.
+
+## Navigation
+
+- `apps/mobile/src/navigation/AppNavigator.tsx` owns the root React Navigation native stack.
+- `apps/mobile/src/navigation/routes.ts` is the source of truth for route names and params.
+- First-run screens are route-level files in `apps/mobile/src/screens/`.
+- Shared onboarding layout belongs in `apps/mobile/src/components/OnboardingStepScreen.tsx`.
+- Setup-complete state, selected language and English tax-term visibility are persisted through `apps/mobile/src/lib/preferences.ts`.
+- Dashboard next-best-action logic can read local draft profile state from `apps/mobile/src/lib/taxProfile.ts`.
 
 ## API client rules
 

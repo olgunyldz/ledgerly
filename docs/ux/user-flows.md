@@ -15,8 +15,8 @@ Ledgerly's first build should prioritise a complete, narrow loop over broad feat
 2. App restores session and shows `Welcome` if no profile exists.
 3. User selects app language and whether official English tax terms should stay visible.
 4. User creates or signs into an account.
-5. User confirms UK scope, tax year, work type, income sources and expected expense categories.
-6. User reviews the profile summary and confirms.
+5. User confirms UK scope, tax year, work type, income sources and expected expense categories; selections save locally as draft profile data.
+6. User reviews the stored profile summary and confirms.
 7. User lands on `Dashboard` with setup tasks and a cautious empty estimate.
 
 ## Add expense manually

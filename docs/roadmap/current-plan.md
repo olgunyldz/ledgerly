@@ -25,21 +25,30 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Temporary onboarding and dashboard flow scaffolded.
 - Epic, feature, task and bug backlog created.
 - Agent rules updated to keep backlog and bug tracking current.
+- React Navigation stack added for first-run setup and dashboard.
+- Onboarding routes split into route-level screen files.
+- Mobile dependencies installed.
+- `npm run typecheck` restored and passing.
+- Selected language and setup-complete state persisted with AsyncStorage.
+- Official English tax terms visibility preference added and persisted.
+- Multilingual copy QA checklist added for onboarding and tax-sensitive copy.
+- Tax profile selections are saved locally before backend persistence exists.
+- Dashboard setup tasks reflect whether the minimum tax profile is ready.
+- Dashboard record cards added for income, expenses and documents.
+- Dashboard next-best-action logic added from local profile state.
 
 ### Next
 
-- Replace temporary screen state with React Navigation stack.
-- Split onboarding into route-level screen files.
-- Persist selected language and setup-complete state.
-- Install mobile dependencies and restore `npm run typecheck`.
+- Add CI lint and test commands.
+- Re-check `BUG-001` when Expo dependency policy is pinned.
 
 ### Blocked
 
-- Mobile typecheck is blocked until dependencies are installed in `apps/mobile`.
+- No current Foundation blocker.
 
 ### Risks
 
-- Temporary in-memory navigation should not grow much further before the real navigation shell is added.
+- `BUG-001` remains deferred because the non-breaking audit fix is unavailable.
 - Tax-related screens must remain placeholder-only until deterministic rule coverage and audit logging are in place.
 
 ## Milestone Checklist
@@ -50,12 +59,12 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - [x] MVP route and user-flow definition
 - [x] Initial mobile onboarding/dashboard scaffold
 - [x] Canonical backlog and bug tracking rules
-- [ ] React Navigation shell
-- [ ] Mobile dependency install and typecheck restoration
+- [x] React Navigation shell
+- [x] Mobile dependency install and typecheck restoration
 
 ### Private Beta
 
-- [ ] Persistent onboarding state
+- [x] Persistent onboarding state
 - [ ] Basic tax profile questionnaire
 - [ ] Income and expense entry
 - [ ] Deterministic tax estimate endpoint
