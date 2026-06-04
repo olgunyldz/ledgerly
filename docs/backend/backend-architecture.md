@@ -29,6 +29,7 @@ workers/       async/background jobs
 - Repositories should hide persistence details.
 - External integrations must be behind interfaces.
 - Tax calculations must call the rules package/service and include rule version in output.
+- `apps/api/app/services/tax_rules_service.py` is the temporary bridge to `packages/tax-rules` until a first-class package boundary is introduced.
 
 ## Error strategy
 

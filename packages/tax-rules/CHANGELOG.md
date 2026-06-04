@@ -6,4 +6,5 @@
 - Added source metadata for GOV.UK Income Tax and self-employed National Insurance thresholds.
 - Added boundary tests for personal allowance, basic-rate limit and Class 4 National Insurance thresholds.
 - Added audit-friendly calculation metadata with `tax_year`, `rule_version`, `inputs_snapshot`, assumptions and warnings.
+- Added a small CLI entrypoint for backend service integration.
 - Added requirement that all future rule changes include source metadata and tests.

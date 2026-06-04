@@ -236,12 +236,12 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E4-F2 — Estimate API
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Define request and response schema.
-- [ ] Implement `tax-estimate` endpoint using tax rules package.
-- [ ] Add audit event payload for tax-impacting calculations.
-- [ ] Document API contract.
+- [x] Define request and response schema.
+- [x] Implement `tax-estimate` endpoint using tax rules package.
+- [x] Add audit event payload for tax-impacting calculations.
+- [x] Document API contract.
 
 ### E4-F3 — Mobile Estimate View
 
