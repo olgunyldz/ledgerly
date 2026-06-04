@@ -5,6 +5,8 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/routes';
 import { colors, radius, spacing, typography } from '../theme/tokens';
 import { getTaxProfile, hasMinimumTaxProfile } from '../lib/taxProfile';
+import { getIncomeSummary, type IncomeSummary } from '../lib/incomeRecords';
+import { formatPenceAsPounds } from '../lib/money';
 
 type DashboardScreenProps = NativeStackScreenProps<RootStackParamList, 'Dashboard'>;
 type DashboardRoute = 'TaxProfileIntro' | 'AddIncome';
@@ -12,10 +14,12 @@ type DashboardRoute = 'TaxProfileIntro' | 'AddIncome';
 export function DashboardScreen({ navigation }: DashboardScreenProps) {
   const { t } = useTranslation();
   const [isProfileReady, setIsProfileReady] = React.useState(false);
+  const [incomeSummary, setIncomeSummary] = React.useState<IncomeSummary>({ count: 0, totalPence: 0 });
 
   React.useEffect(() => {
     const unsubscribe = navigation.addListener('focus', () => {
       getTaxProfile().then((profile) => setIsProfileReady(hasMinimumTaxProfile(profile)));
+      getIncomeSummary().then(setIncomeSummary);
     });
 
     return unsubscribe;
@@ -65,7 +69,14 @@ export function DashboardScreen({ navigation }: DashboardScreenProps) {
       <View style={styles.cardGrid}>
         <Pressable accessibilityRole="button" onPress={() => navigation.navigate('AddIncome')} style={styles.recordCard}>
           <Text style={styles.recordTitle}>{t('incomeCardTitle')}</Text>
-          <Text style={styles.recordBody}>{t('incomeCardBody')}</Text>
+          <Text style={styles.recordBody}>
+            {incomeSummary.count > 0
+              ? t('incomeCardSummary', {
+                  count: incomeSummary.count,
+                  total: formatPenceAsPounds(incomeSummary.totalPence),
+                })
+              : t('incomeCardBody')}
+          </Text>
         </Pressable>
         <Pressable accessibilityRole="button" onPress={() => navigation.navigate('AddExpense')} style={styles.recordCard}>
           <Text style={styles.recordTitle}>{t('expenseCardTitle')}</Text>

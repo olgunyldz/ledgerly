@@ -193,13 +193,13 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E3-F1 — Income Records
 
-**Status:** Todo
+**Status:** In Progress
 
 - [ ] Add income list section to `Transactions`.
-- [ ] Build `AddIncome` form.
-- [ ] Validate amount, date, source and tax year.
-- [ ] Show confirmation summary before save.
-- [ ] Add local test fixtures for income records.
+- [x] Build `AddIncome` form.
+- [x] Validate amount, date, source and tax year.
+- [x] Show confirmation summary before save.
+- [x] Add local test fixtures for income records.
 
 ### E3-F2 — Expense Records
 

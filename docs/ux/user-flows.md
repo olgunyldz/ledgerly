@@ -32,12 +32,12 @@ Ledgerly's first build should prioritise a complete, narrow loop over broad feat
 ## Add income manually
 
 1. User taps `Add income`.
-2. Enters amount, date, payer or source and tax year.
-3. Selects whether the income is self-employment, landlord, employment or other.
-4. App shows how the selected income type affects estimates.
-5. User reviews a human-readable summary.
-6. User saves income as confirmed.
-7. Dashboard totals and tax estimate update.
+2. Enters amount, date, source, tax year and an optional note.
+3. App validates amount, date, source and tax year.
+4. User reviews a human-readable summary.
+5. User saves income as confirmed.
+6. Dashboard income card updates with record count and total.
+7. Tax estimate remains cautious until deterministic estimate logic is connected.
 
 ## Ask tax question
 
