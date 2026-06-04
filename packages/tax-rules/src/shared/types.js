@@ -4,10 +4,11 @@
  */
 export function withRuleMetadata(result, { taxYear, ruleVersion, assumptions = [], warnings = [] }) {
   return {
-    taxYear,
-    ruleVersion,
+    ...result,
+    tax_year: taxYear,
+    rule_version: ruleVersion,
+    inputs_snapshot: result.inputs_snapshot ?? {},
     assumptions,
     warnings,
-    ...result,
   };
 }

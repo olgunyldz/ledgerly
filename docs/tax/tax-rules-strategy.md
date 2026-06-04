@@ -15,6 +15,25 @@ Provide deterministic, versioned and testable UK tax calculations that AI and ba
 - Source metadata
 - Calculation assumptions
 
+## Initial implemented coverage
+
+`packages/tax-rules` currently implements a draft `2025-26.0` self-employed reserve estimate for England, Wales and Northern Ireland planning support.
+
+Included:
+
+- Income Tax personal allowance and basic/higher/additional rates.
+- Class 4 National Insurance lower and upper profit limits.
+- Source metadata in rule constants.
+- Calculation output metadata with `tax_year`, `rule_version`, `inputs_snapshot`, `assumptions` and `warnings`.
+
+Not yet included:
+
+- Scottish Income Tax.
+- Personal Allowance tapering above £100,000.
+- Class 2 voluntary contribution choices.
+- Student loans, payments on account, Marriage Allowance, Blind Person's Allowance or other reliefs.
+- Audit event persistence.
+
 ## Versioning
 
 Use tax-year versions, for example:

@@ -17,6 +17,11 @@ Required:
 - scenario snapshots
 - invalid input tests
 
+Current coverage:
+
+- `packages/tax-rules/src/self-employed.test.js` covers 2025-26 personal allowance, basic-rate and Class 4 National Insurance boundaries.
+- `packages/tax-rules/src/self-employed.test.js` checks rule metadata, source metadata and invalid inputs for the self-employed reserve estimate.
+
 ## AI tests
 
 Required:
