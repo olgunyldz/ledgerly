@@ -204,3 +204,12 @@ Use status labels: `Todo`, `In Progress`, `Blocked`, `Done`.
 - [ ] Restore `npm run typecheck`.
 - [ ] Add CI lint and test commands.
 - [ ] Add private beta release checklist.
+
+### Feature 7.3 — Backlog Hygiene
+
+**Status:** Done
+
+- [x] Create canonical epic -> feature -> task backlog.
+- [x] Link backlog from documentation index.
+- [x] Add agent rule requiring accepted recommendations to be added to the backlog.
+- [x] Add agent rule requiring completed epics, features and tasks to be updated in the backlog.

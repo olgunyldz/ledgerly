@@ -89,11 +89,27 @@ Must update:
 - `docs/qa/test-strategy.md`
 - `docs/operations/release-checklist.md`
 - `docs/roadmap/tasks.md`
+- `docs/roadmap/epics.md`
+
+## Backlog management
+
+`docs/roadmap/epics.md` is the canonical delivery backlog. All agents must keep it current.
+
+When planning, implementing or reviewing work:
+
+- Add every accepted recommendation, follow-up idea or newly discovered work item to `docs/roadmap/epics.md` as an epic, feature or task.
+- Update completed tasks from `[ ]` to `[x]` before finishing the turn.
+- Update feature and epic status labels when their task state changes.
+- Add blockers with `Blocked` status and a short note describing what is needed to unblock them.
+- Keep `docs/roadmap/tasks.md` as the priority snapshot; do not use it as the canonical structured backlog.
+- Mention backlog updates in the final response whenever they were changed.
 
 ## Required update matrix
 
 | Change type | Required docs/files to update |
 |---|---|
+| Any accepted recommendation or follow-up task | `docs/roadmap/epics.md` |
+| Completed epic, feature or task | `docs/roadmap/epics.md` status/checklist update |
 | New screen | `docs/ux/screen-map.md`, `docs/ux/user-flows.md`, mobile route types, i18n keys |
 | New API endpoint | `docs/backend/api-design.md`, schemas, tests, OpenAPI notes |
 | New tax rule | `docs/tax/tax-rules-strategy.md`, source reference, tests, package changelog |
@@ -110,6 +126,7 @@ A change is not done until:
 
 - Code builds and tests pass.
 - Relevant docs are updated.
+- `docs/roadmap/epics.md` reflects any new, changed, blocked or completed epic/feature/task.
 - New or changed user-facing copy has i18n keys.
 - Tax-impacting logic has deterministic tests.
 - Security/privacy impact has been considered.
