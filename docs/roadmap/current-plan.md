@@ -25,11 +25,11 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Temporary onboarding and dashboard flow scaffolded.
 - Epic, feature, task and bug backlog created.
 - Agent rules updated to keep backlog and bug tracking current.
+- React Navigation stack added for first-run setup and dashboard.
+- Onboarding routes split into route-level screen files.
 
 ### Next
 
-- Replace temporary screen state with React Navigation stack.
-- Split onboarding into route-level screen files.
 - Persist selected language and setup-complete state.
 - Install mobile dependencies and restore `npm run typecheck`.
 
@@ -39,7 +39,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 
 ### Risks
 
-- Temporary in-memory navigation should not grow much further before the real navigation shell is added.
+- Setup completion is still in memory and must be persisted before private beta.
 - Tax-related screens must remain placeholder-only until deterministic rule coverage and audit logging are in place.
 
 ## Milestone Checklist
@@ -50,7 +50,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - [x] MVP route and user-flow definition
 - [x] Initial mobile onboarding/dashboard scaffold
 - [x] Canonical backlog and bug tracking rules
-- [ ] React Navigation shell
+- [x] React Navigation shell
 - [ ] Mobile dependency install and typecheck restoration
 
 ### Private Beta

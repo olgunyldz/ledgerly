@@ -41,6 +41,14 @@ features/transactions
 - Cross-screen app preferences: lightweight store only if needed.
 - Do not duplicate backend tax calculations in mobile state.
 
+## Navigation
+
+- `apps/mobile/src/navigation/AppNavigator.tsx` owns the root React Navigation native stack.
+- `apps/mobile/src/navigation/routes.ts` is the source of truth for route names and params.
+- First-run screens are route-level files in `apps/mobile/src/screens/`.
+- Shared onboarding layout belongs in `apps/mobile/src/components/OnboardingStepScreen.tsx`.
+- Setup-complete state is currently in memory and must move to persisted app preferences before private beta.
+
 ## API client rules
 
 - Use typed request/response schemas.

@@ -134,12 +134,12 @@ No known bugs currently tracked.
 
 ### E1-F3 — Navigation Shell
 
-**Status:** Todo
+**Status:** In Progress
 
-- [ ] Replace temporary screen state with React Navigation stack.
-- [ ] Add screen files for each first-run route.
+- [x] Replace temporary screen state with React Navigation stack.
+- [x] Add screen files for each first-run route.
 - [ ] Add persistent setup-complete state.
-- [ ] Add route-level accessibility titles.
+- [x] Add route-level accessibility titles.
 
 ## E2 — Onboarding and Tax Profile
 
@@ -157,14 +157,14 @@ No known bugs currently tracked.
 
 ### E2-F2 — Tax Profile Questionnaire
 
-**Status:** Todo
+**Status:** In Progress
 
-- [ ] Add `TaxProfileIntro` screen.
-- [ ] Add `ResidencyTaxYear` screen.
-- [ ] Add `WorkType` screen.
-- [ ] Add `IncomeSources` screen.
-- [ ] Add `ExpenseHabits` screen.
-- [ ] Add `ReviewProfile` confirmation screen.
+- [x] Add `TaxProfileIntro` screen.
+- [x] Add `ResidencyTaxYear` screen.
+- [x] Add `WorkType` screen.
+- [x] Add `IncomeSources` screen.
+- [x] Add `ExpenseHabits` screen.
+- [x] Add `ReviewProfile` confirmation screen.
 - [ ] Save tax profile locally before backend persistence exists.
 
 ### E2-F3 — Starter Dashboard
