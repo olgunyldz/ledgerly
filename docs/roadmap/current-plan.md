@@ -27,19 +27,23 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Agent rules updated to keep backlog and bug tracking current.
 - React Navigation stack added for first-run setup and dashboard.
 - Onboarding routes split into route-level screen files.
+- Mobile dependencies installed.
+- `npm run typecheck` restored and passing.
 
 ### Next
 
 - Persist selected language and setup-complete state.
-- Install mobile dependencies and restore `npm run typecheck`.
+- Add CI lint and test commands.
+- Re-check `BUG-001` when Expo dependency policy is pinned.
 
 ### Blocked
 
-- Mobile typecheck is blocked until dependencies are installed in `apps/mobile`.
+- No current Foundation blocker.
 
 ### Risks
 
 - Setup completion is still in memory and must be persisted before private beta.
+- `BUG-001` remains deferred because the non-breaking audit fix is unavailable.
 - Tax-related screens must remain placeholder-only until deterministic rule coverage and audit logging are in place.
 
 ## Milestone Checklist
@@ -51,7 +55,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - [x] Initial mobile onboarding/dashboard scaffold
 - [x] Canonical backlog and bug tracking rules
 - [x] React Navigation shell
-- [ ] Mobile dependency install and typecheck restoration
+- [x] Mobile dependency install and typecheck restoration
 
 ### Private Beta
 

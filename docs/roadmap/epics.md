@@ -108,7 +108,16 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### Known Bugs
 
-No known bugs currently tracked.
+#### BUG-001 — Expo transitive `uuid` moderate advisory
+
+| Field | Value |
+|---|---|
+| Status | Deferred |
+| Severity | Medium |
+| Source | Agent discovery via `npm audit --audit-level=moderate` |
+| Affected area | Mobile |
+| Summary | `expo` pulls a transitive `uuid <11.1.1` advisory through `@expo/config-plugins` -> `xcode`; npm reports 10 moderate vulnerabilities. |
+| Next step | Re-check after Expo dependency policy is pinned; do not run `npm audit fix --force` because npm proposes a breaking Expo change. |
 
 ## E1 — Product Identity and UX Foundation
 
@@ -300,10 +309,10 @@ No known bugs currently tracked.
 
 ### E7-F2 — QA and Release
 
-**Status:** Todo
+**Status:** In Progress
 
-- [ ] Install mobile dependencies.
-- [ ] Restore `npm run typecheck`.
+- [x] Install mobile dependencies.
+- [x] Restore `npm run typecheck`.
 - [ ] Add CI lint and test commands.
 - [ ] Add private beta release checklist.
 
