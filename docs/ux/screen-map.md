@@ -49,8 +49,8 @@ After setup, the primary app loop is `Dashboard` -> `Transactions` / `Documents`
 | Transactions | Income/expense list | income and expense sections, empty states, totals, add buttons |
 | Add Income | Capture income | amount, source, tax year, document link |
 | Add Expense | Capture expense | amount, date, merchant, category, business percentage, allowable expense helper |
-| Documents | Uploaded documents | status list, upload CTA |
-| Document Review | Confirm extracted data | field review, confidence badges |
+| Documents | Uploaded documents | empty state, receipt upload placeholder, confirmation rule |
+| Document Review | Confirm extracted data | extracted field placeholder, confirmation warning |
 | Tax Estimate | Explain estimate | breakdown, assumptions, caveats |
 | Accountant Pack | Export summary | tax year selector, PDF/CSV actions |
 | Deadlines | Show upcoming obligations | deadline list, reminders |

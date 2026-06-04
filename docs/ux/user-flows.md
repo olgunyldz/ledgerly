@@ -54,12 +54,11 @@ Ledgerly's first build should prioritise a complete, narrow loop over broad feat
 ## Upload receipt
 
 1. User taps upload.
-2. App captures image or file.
-3. Backend stores file and starts extraction.
-4. User sees pending status.
-5. Extracted fields appear in review screen.
-6. User confirms or edits.
-7. Confirmed expense is created.
+2. App opens a receipt upload placeholder until file capture is connected.
+3. User sees a clear confirmation rule: Ledgerly will not create records from documents without explicit confirmation.
+4. Extracted placeholder fields appear in `DocumentReview`.
+5. User returns to `Documents`; no income or expense record is created from the placeholder.
+6. Future file capture will require user confirmation before confirmed expense creation.
 
 ## Generate accountant pack
 

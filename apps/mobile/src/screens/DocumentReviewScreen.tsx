@@ -5,38 +5,32 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/routes';
 import { colors, radius, spacing, typography } from '../theme/tokens';
 
-type DocumentsScreenProps = NativeStackScreenProps<RootStackParamList, 'Documents'>;
+type DocumentReviewScreenProps = NativeStackScreenProps<RootStackParamList, 'DocumentReview'>;
 
-const placeholderDocumentId = 'receipt-placeholder-1';
-
-export function DocumentsScreen({ navigation }: DocumentsScreenProps) {
+export function DocumentReviewScreen({ navigation, route }: DocumentReviewScreenProps) {
   const { t } = useTranslation();
 
   return (
     <ScrollView contentContainerStyle={styles.content} style={styles.screen}>
-      <Text style={styles.title}>{t('documentsTitle')}</Text>
-      <Text style={styles.body}>{t('documentsBody')}</Text>
+      <Text style={styles.title}>{t('documentReviewTitle')}</Text>
+      <Text style={styles.body}>{t('documentReviewBody')}</Text>
 
-      <View style={styles.emptyCard}>
-        <Text style={styles.emptyTitle}>{t('documentsEmptyTitle')}</Text>
-        <Text style={styles.muted}>{t('documentsEmptyBody')}</Text>
+      <View style={styles.card}>
+        <Text style={styles.sectionTitle}>{t('documentExtractedFieldsTitle')}</Text>
+        <Text style={styles.fieldLine}>{t('documentIdLabel')}: {route.params.documentId}</Text>
+        <Text style={styles.fieldLine}>{t('expenseMerchantLabel')}: {t('documentSampleMerchant')}</Text>
+        <Text style={styles.fieldLine}>{t('expenseAmountLabel')}: {t('documentSampleAmount')}</Text>
+        <Text style={styles.fieldLine}>{t('expenseDateLabel')}: {t('documentSampleDate')}</Text>
+        <Text style={styles.fieldLine}>{t('expenseCategoryLabel')}: {t('expenseHabitTravel')}</Text>
       </View>
 
       <View style={styles.noticeCard}>
         <Text style={styles.noticeTitle}>{t('documentConfirmationTitle')}</Text>
-        <Text style={styles.noticeBody}>{t('documentConfirmationBody')}</Text>
+        <Text style={styles.noticeBody}>{t('documentReviewConfirmationBody')}</Text>
       </View>
 
-      <Pressable
-        accessibilityRole="button"
-        onPress={() => navigation.navigate('DocumentReview', { documentId: placeholderDocumentId })}
-        style={styles.button}
-      >
-        <Text style={styles.buttonText}>{t('uploadReceipt')}</Text>
-      </Pressable>
-
-      <Pressable accessibilityRole="button" onPress={() => navigation.goBack()} style={styles.secondaryButton}>
-        <Text style={styles.secondaryButtonText}>{t('back')}</Text>
+      <Pressable accessibilityRole="button" onPress={() => navigation.goBack()} style={styles.button}>
+        <Text style={styles.buttonText}>{t('confirmDocumentLater')}</Text>
       </Pressable>
     </ScrollView>
   );
@@ -47,7 +41,7 @@ const styles = StyleSheet.create({
   content: { padding: spacing.lg, paddingTop: spacing.xl },
   title: { color: colors.ink, fontSize: 34, fontWeight: '700', marginBottom: spacing.sm },
   body: { color: colors.slate, fontSize: typography.body, lineHeight: 24, marginBottom: spacing.lg },
-  emptyCard: {
+  card: {
     backgroundColor: colors.surface,
     borderColor: colors.line,
     borderRadius: radius.md,
@@ -55,8 +49,8 @@ const styles = StyleSheet.create({
     marginBottom: spacing.lg,
     padding: spacing.md,
   },
-  emptyTitle: { color: colors.ink, fontSize: typography.heading, fontWeight: '700', marginBottom: spacing.sm },
-  muted: { color: colors.slate, fontSize: typography.body, lineHeight: 22 },
+  sectionTitle: { color: colors.ink, fontSize: typography.heading, fontWeight: '700', marginBottom: spacing.sm },
+  fieldLine: { color: colors.slate, fontSize: typography.body, lineHeight: 26 },
   noticeCard: {
     backgroundColor: colors.mint,
     borderColor: colors.ledgerGreen,
@@ -71,17 +65,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.ledgerGreen,
     borderRadius: radius.md,
-    marginBottom: spacing.md,
     padding: spacing.md,
   },
   buttonText: { color: colors.surface, fontWeight: '700' },
-  secondaryButton: {
-    alignItems: 'center',
-    backgroundColor: colors.surface,
-    borderColor: colors.line,
-    borderRadius: radius.md,
-    borderWidth: 1,
-    padding: spacing.md,
-  },
-  secondaryButtonText: { color: colors.ink, fontWeight: '700' },
 });

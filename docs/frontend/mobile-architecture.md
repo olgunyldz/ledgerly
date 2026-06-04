@@ -49,6 +49,7 @@ features/transactions
 - `apps/mobile/src/navigation/AppNavigator.tsx` owns the root React Navigation native stack.
 - `apps/mobile/src/navigation/routes.ts` is the source of truth for route names and params.
 - First-run screens are route-level files in `apps/mobile/src/screens/`.
+- Document intake uses `Documents` and `DocumentReview` route-level screens as placeholders until upload/extraction APIs exist.
 - Shared onboarding layout belongs in `apps/mobile/src/components/OnboardingStepScreen.tsx`.
 - Setup-complete state, selected language and English tax-term visibility are persisted through `apps/mobile/src/lib/preferences.ts`.
 - Dashboard next-best-action logic can read local draft profile state from `apps/mobile/src/lib/taxProfile.ts`.

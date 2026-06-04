@@ -18,6 +18,7 @@ import { DashboardScreen } from '../screens/DashboardScreen';
 import { AssistantScreen } from '../screens/AssistantScreen';
 import { TransactionsScreen } from '../screens/TransactionsScreen';
 import { DocumentsScreen } from '../screens/DocumentsScreen';
+import { DocumentReviewScreen } from '../screens/DocumentReviewScreen';
 import { AddIncomeScreen } from '../screens/AddIncomeScreen';
 import { AddExpenseScreen } from '../screens/AddExpenseScreen';
 import { getSetupComplete, getStoredLanguage, setSetupComplete } from '../lib/preferences';
@@ -102,6 +103,7 @@ export function AppNavigator() {
         <Stack.Screen name="AddIncome" component={AddIncomeScreen} options={{ title: t('addIncomeTitle') }} />
         <Stack.Screen name="AddExpense" component={AddExpenseScreen} options={{ title: t('addExpenseTitle') }} />
         <Stack.Screen name="Documents" component={DocumentsScreen} options={{ title: t('documentsTitle') }} />
+        <Stack.Screen name="DocumentReview" component={DocumentReviewScreen} options={{ title: t('documentReviewTitle') }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
