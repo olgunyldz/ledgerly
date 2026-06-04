@@ -49,4 +49,5 @@
 - `operations/release-checklist.md`
 - `compliance-checklist.md`
 - `roadmap/roadmap.md`
+- `roadmap/epics.md`
 - `roadmap/tasks.md`

@@ -1,5 +1,7 @@
 # Tasks Backlog
 
+Use `docs/roadmap/epics.md` as the structured epic -> feature -> task backlog. This file is the priority snapshot for private beta and MVP planning.
+
 ## P0 — Must have before private beta
 
 - [ ] Implement app navigation shell.
