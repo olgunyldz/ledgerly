@@ -1,5 +1,23 @@
 # Screen Map
 
+## MVP route order
+
+Ledgerly's MVP should move users through one calm setup path before exposing the full app:
+
+1. `Splash`
+2. `Welcome`
+3. `LanguageSelect`
+4. `SignIn`
+5. `TaxProfileIntro`
+6. `ResidencyTaxYear`
+7. `WorkType`
+8. `IncomeSources`
+9. `ExpenseHabits`
+10. `ReviewProfile`
+11. `Dashboard`
+
+After setup, the primary app loop is `Dashboard` -> `Transactions` / `Documents` / `Assistant` -> `TaxEstimate` -> `AccountantPack`.
+
 ## Navigation groups
 
 ### Public / pre-auth
@@ -9,7 +27,7 @@
 | Splash | App loading, auth restore | logo, loading state |
 | Welcome | Explain value proposition | language-aware intro, CTA |
 | Language Select | Choose app/explanation language | language list, English tax terms toggle |
-| Sign In / Sign Up | Account access | email/social auth, privacy notice |
+| Sign In | Account access | email/social auth, privacy notice |
 
 ### Onboarding
 
@@ -52,3 +70,4 @@
 - Every tax-impacting confirmation must show a human-readable summary.
 - Avoid dense HMRC-style copy on mobile; use progressive disclosure.
 - Keep official English tax terms visible where user may need them later.
+- Every MVP route must map to a `RootStackParamList` entry before implementation starts.
