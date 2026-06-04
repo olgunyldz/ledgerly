@@ -178,14 +178,14 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E2-F3 — Starter Dashboard
 
-**Status:** In Progress
+**Status:** Done
 
 - [x] Add temporary dashboard after setup.
 - [x] Show empty tax estimate state.
 - [x] Show setup task list.
 - [x] Reflect tax profile readiness in setup tasks.
-- [ ] Add dashboard cards for income, expenses and documents.
-- [ ] Add next-best-action logic from profile state.
+- [x] Add dashboard cards for income, expenses and documents.
+- [x] Add next-best-action logic from profile state.
 
 ## E3 — Records and Documents
 

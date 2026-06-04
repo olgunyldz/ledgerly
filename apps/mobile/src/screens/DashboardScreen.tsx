@@ -7,6 +7,7 @@ import { colors, radius, spacing, typography } from '../theme/tokens';
 import { getTaxProfile, hasMinimumTaxProfile } from '../lib/taxProfile';
 
 type DashboardScreenProps = NativeStackScreenProps<RootStackParamList, 'Dashboard'>;
+type DashboardRoute = 'TaxProfileIntro' | 'AddIncome';
 
 export function DashboardScreen({ navigation }: DashboardScreenProps) {
   const { t } = useTranslation();
@@ -19,6 +20,18 @@ export function DashboardScreen({ navigation }: DashboardScreenProps) {
 
     return unsubscribe;
   }, [navigation]);
+
+  const nextBestAction = isProfileReady
+    ? {
+        label: t('taskIncome'),
+        route: 'AddIncome' as DashboardRoute,
+        body: t('incomeCardBody'),
+      }
+    : {
+        label: t('dashboardProfileMissing'),
+        route: 'TaxProfileIntro' as DashboardRoute,
+        body: t('taxProfileBody'),
+      };
 
   return (
     <ScrollView contentContainerStyle={styles.scrollContent} style={styles.screen}>
@@ -36,6 +49,32 @@ export function DashboardScreen({ navigation }: DashboardScreenProps) {
         <Text style={styles.task}>1. {isProfileReady ? t('dashboardProfileReady') : t('dashboardProfileMissing')}</Text>
         <Text style={styles.task}>2. {t('taskIncome')}</Text>
         <Text style={styles.task}>3. {t('taskExpense')}</Text>
+      </View>
+
+      <Text style={styles.sectionTitle}>{t('nextBestAction')}</Text>
+      <Pressable
+        accessibilityRole="button"
+        onPress={() => navigation.navigate(nextBestAction.route)}
+        style={styles.actionCard}
+      >
+        <Text style={styles.actionTitle}>{nextBestAction.label}</Text>
+        <Text style={styles.actionBody}>{nextBestAction.body}</Text>
+      </Pressable>
+
+      <Text style={styles.sectionTitle}>{t('dashboardCards')}</Text>
+      <View style={styles.cardGrid}>
+        <Pressable accessibilityRole="button" onPress={() => navigation.navigate('AddIncome')} style={styles.recordCard}>
+          <Text style={styles.recordTitle}>{t('incomeCardTitle')}</Text>
+          <Text style={styles.recordBody}>{t('incomeCardBody')}</Text>
+        </Pressable>
+        <Pressable accessibilityRole="button" onPress={() => navigation.navigate('AddExpense')} style={styles.recordCard}>
+          <Text style={styles.recordTitle}>{t('expenseCardTitle')}</Text>
+          <Text style={styles.recordBody}>{t('expenseCardBody')}</Text>
+        </Pressable>
+        <Pressable accessibilityRole="button" onPress={() => navigation.navigate('Documents')} style={styles.recordCard}>
+          <Text style={styles.recordTitle}>{t('documentsCardTitle')}</Text>
+          <Text style={styles.recordBody}>{t('documentsCardBody')}</Text>
+        </Pressable>
       </View>
 
       <Text style={styles.sectionTitle}>{t('quickActions')}</Text>
@@ -75,6 +114,26 @@ const styles = StyleSheet.create({
   amount: { fontSize: 36, fontWeight: '700', marginVertical: spacing.sm, color: colors.ink },
   muted: { color: colors.slate, lineHeight: 20 },
   task: { color: colors.ink, fontSize: typography.body, lineHeight: 28 },
+  actionCard: {
+    backgroundColor: colors.mint,
+    borderColor: colors.ledgerGreen,
+    borderRadius: radius.md,
+    borderWidth: 1,
+    marginBottom: spacing.lg,
+    padding: spacing.md,
+  },
+  actionTitle: { color: colors.ledgerGreen, fontSize: typography.heading, fontWeight: '700', marginBottom: spacing.sm },
+  actionBody: { color: colors.ink, fontSize: typography.body, lineHeight: 22 },
+  cardGrid: { gap: spacing.md, marginBottom: spacing.lg },
+  recordCard: {
+    backgroundColor: colors.surface,
+    borderColor: colors.line,
+    borderRadius: radius.md,
+    borderWidth: 1,
+    padding: spacing.md,
+  },
+  recordTitle: { color: colors.ink, fontSize: typography.body, fontWeight: '700', marginBottom: spacing.xs },
+  recordBody: { color: colors.slate, fontSize: typography.caption, lineHeight: 20 },
   button: {
     backgroundColor: colors.ledgerGreen,
     padding: spacing.md,

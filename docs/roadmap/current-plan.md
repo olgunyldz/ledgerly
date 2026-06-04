@@ -34,12 +34,12 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Multilingual copy QA checklist added for onboarding and tax-sensitive copy.
 - Tax profile selections are saved locally before backend persistence exists.
 - Dashboard setup tasks reflect whether the minimum tax profile is ready.
+- Dashboard record cards added for income, expenses and documents.
+- Dashboard next-best-action logic added from local profile state.
 
 ### Next
 
 - Add CI lint and test commands.
-- Add dashboard cards for income, expenses and documents.
-- Add next-best-action logic from profile state.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
 ### Blocked
