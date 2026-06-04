@@ -203,13 +203,14 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E3-F2 — Expense Records
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Add expense list section to `Transactions`.
-- [ ] Build `AddExpense` form.
-- [ ] Validate amount, date, merchant, category and business-use percentage.
-- [ ] Show official term helper for allowable expenses.
-- [ ] Show confirmation summary before save.
+- [x] Add expense list section to `Transactions`.
+- [x] Build `AddExpense` form.
+- [x] Validate amount, date, merchant, category and business-use percentage.
+- [x] Show official term helper for allowable expenses.
+- [x] Show confirmation summary before save.
+- [x] Add local test fixtures for expense records.
 
 ### E3-F3 — Document Intake
 

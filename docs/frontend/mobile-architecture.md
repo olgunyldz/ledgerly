@@ -41,6 +41,7 @@ features/transactions
 - Cross-screen app preferences: AsyncStorage via `apps/mobile/src/lib/preferences.ts`.
 - Draft tax profile state: AsyncStorage via `apps/mobile/src/lib/taxProfile.ts` until backend persistence exists.
 - Draft income records: AsyncStorage via `apps/mobile/src/lib/incomeRecords.ts` until backend persistence exists.
+- Draft expense records: AsyncStorage via `apps/mobile/src/lib/expenseRecords.ts` until backend persistence exists.
 - Do not duplicate backend tax calculations in mobile state.
 
 ## Navigation
@@ -52,6 +53,7 @@ features/transactions
 - Setup-complete state, selected language and English tax-term visibility are persisted through `apps/mobile/src/lib/preferences.ts`.
 - Dashboard next-best-action logic can read local draft profile state from `apps/mobile/src/lib/taxProfile.ts`.
 - Transactions reads local draft income records from `apps/mobile/src/lib/incomeRecords.ts` until the records API exists.
+- Transactions reads local draft expense records from `apps/mobile/src/lib/expenseRecords.ts` until the records API exists.
 
 ## API client rules
 

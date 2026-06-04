@@ -46,9 +46,9 @@ After setup, the primary app loop is `Dashboard` -> `Transactions` / `Documents`
 |---|---|---|
 | Dashboard | Tax health overview | estimate card, tasks, deadlines |
 | Assistant | Multi-language tax chat | chat, source chips, suggested questions |
-| Transactions | Income/expense list | income record section, empty state, totals, add button |
+| Transactions | Income/expense list | income and expense sections, empty states, totals, add buttons |
 | Add Income | Capture income | amount, source, tax year, document link |
-| Add Expense | Capture expense | amount, category, business percentage |
+| Add Expense | Capture expense | amount, date, merchant, category, business percentage, allowable expense helper |
 | Documents | Uploaded documents | status list, upload CTA |
 | Document Review | Confirm extracted data | field review, confidence badges |
 | Tax Estimate | Explain estimate | breakdown, assumptions, caveats |

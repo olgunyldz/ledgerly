@@ -24,10 +24,12 @@ Ledgerly's first build should prioritise a complete, narrow loop over broad feat
 1. User taps `Add expense`.
 2. Enters amount, date, merchant and category.
 3. Selects business-use percentage if mixed-use.
-4. App shows tax explanation for selected category.
+4. App shows an official-term helper for allowable expenses.
 5. User reviews a human-readable summary.
 6. User saves expense as confirmed.
-7. Dashboard estimate updates and records the rule version used.
+7. Dashboard expense card updates with record count and total.
+8. User can open `Transactions` to review saved expense records, totals, business-use percentages and notes.
+9. Tax estimate remains cautious until deterministic estimate logic is connected.
 
 ## Add income manually
 
