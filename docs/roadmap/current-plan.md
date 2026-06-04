@@ -16,6 +16,8 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - `E1-F3`: Navigation Shell
 - `E2-F1`: Language Selection
 - `E2-F3`: Starter Dashboard
+- `E3-F1`: Income Records
+- `E3-F2`: Expense Records
 - `E7-F2`: QA and Release baseline
 
 ### Done
@@ -36,9 +38,15 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Dashboard setup tasks reflect whether the minimum tax profile is ready.
 - Dashboard record cards added for income, expenses and documents.
 - Dashboard next-best-action logic added from local profile state.
+- AddIncome form saves local income records with validation and review summary.
+- Dashboard income card reflects local income record count and total.
+- Transactions shows saved local income records, empty state and income total.
+- AddExpense form saves local expense records with validation, allowable expense helper copy and review summary.
+- Transactions shows saved local expense records, empty state and expense total.
 
 ### Next
 
+- Start `E3-F3`: Document Intake.
 - Add CI lint and test commands.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 

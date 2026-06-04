@@ -16,6 +16,7 @@ import { ExpenseHabitsScreen } from '../screens/ExpenseHabitsScreen';
 import { ReviewProfileScreen } from '../screens/ReviewProfileScreen';
 import { DashboardScreen } from '../screens/DashboardScreen';
 import { AssistantScreen } from '../screens/AssistantScreen';
+import { TransactionsScreen } from '../screens/TransactionsScreen';
 import { DocumentsScreen } from '../screens/DocumentsScreen';
 import { AddIncomeScreen } from '../screens/AddIncomeScreen';
 import { AddExpenseScreen } from '../screens/AddExpenseScreen';
@@ -97,6 +98,7 @@ export function AppNavigator() {
         </Stack.Screen>
         <Stack.Screen name="Dashboard" component={DashboardScreen} options={{ title: t('dashboardHeader') }} />
         <Stack.Screen name="Assistant" component={AssistantScreen} options={{ title: t('assistantTitle') }} />
+        <Stack.Screen name="Transactions" component={TransactionsScreen} options={{ title: t('transactionsTitle') }} />
         <Stack.Screen name="AddIncome" component={AddIncomeScreen} options={{ title: t('addIncomeTitle') }} />
         <Stack.Screen name="AddExpense" component={AddExpenseScreen} options={{ title: t('addExpenseTitle') }} />
         <Stack.Screen name="Documents" component={DocumentsScreen} options={{ title: t('documentsTitle') }} />

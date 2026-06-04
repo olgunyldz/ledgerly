@@ -5,6 +5,9 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/routes';
 import { colors, radius, spacing, typography } from '../theme/tokens';
 import { getTaxProfile, hasMinimumTaxProfile } from '../lib/taxProfile';
+import { getIncomeSummary, type IncomeSummary } from '../lib/incomeRecords';
+import { getExpenseSummary, type ExpenseSummary } from '../lib/expenseRecords';
+import { formatPenceAsPounds } from '../lib/money';
 
 type DashboardScreenProps = NativeStackScreenProps<RootStackParamList, 'Dashboard'>;
 type DashboardRoute = 'TaxProfileIntro' | 'AddIncome';
@@ -12,10 +15,14 @@ type DashboardRoute = 'TaxProfileIntro' | 'AddIncome';
 export function DashboardScreen({ navigation }: DashboardScreenProps) {
   const { t } = useTranslation();
   const [isProfileReady, setIsProfileReady] = React.useState(false);
+  const [incomeSummary, setIncomeSummary] = React.useState<IncomeSummary>({ count: 0, totalPence: 0 });
+  const [expenseSummary, setExpenseSummary] = React.useState<ExpenseSummary>({ count: 0, totalPence: 0 });
 
   React.useEffect(() => {
     const unsubscribe = navigation.addListener('focus', () => {
       getTaxProfile().then((profile) => setIsProfileReady(hasMinimumTaxProfile(profile)));
+      getIncomeSummary().then(setIncomeSummary);
+      getExpenseSummary().then(setExpenseSummary);
     });
 
     return unsubscribe;
@@ -63,13 +70,27 @@ export function DashboardScreen({ navigation }: DashboardScreenProps) {
 
       <Text style={styles.sectionTitle}>{t('dashboardCards')}</Text>
       <View style={styles.cardGrid}>
-        <Pressable accessibilityRole="button" onPress={() => navigation.navigate('AddIncome')} style={styles.recordCard}>
+        <Pressable accessibilityRole="button" onPress={() => navigation.navigate('Transactions')} style={styles.recordCard}>
           <Text style={styles.recordTitle}>{t('incomeCardTitle')}</Text>
-          <Text style={styles.recordBody}>{t('incomeCardBody')}</Text>
+          <Text style={styles.recordBody}>
+            {incomeSummary.count > 0
+              ? t('incomeCardSummary', {
+                  count: incomeSummary.count,
+                  total: formatPenceAsPounds(incomeSummary.totalPence),
+                })
+              : t('incomeCardBody')}
+          </Text>
         </Pressable>
         <Pressable accessibilityRole="button" onPress={() => navigation.navigate('AddExpense')} style={styles.recordCard}>
           <Text style={styles.recordTitle}>{t('expenseCardTitle')}</Text>
-          <Text style={styles.recordBody}>{t('expenseCardBody')}</Text>
+          <Text style={styles.recordBody}>
+            {expenseSummary.count > 0
+              ? t('expenseCardSummary', {
+                  count: expenseSummary.count,
+                  total: formatPenceAsPounds(expenseSummary.totalPence),
+                })
+              : t('expenseCardBody')}
+          </Text>
         </Pressable>
         <Pressable accessibilityRole="button" onPress={() => navigation.navigate('Documents')} style={styles.recordCard}>
           <Text style={styles.recordTitle}>{t('documentsCardTitle')}</Text>
