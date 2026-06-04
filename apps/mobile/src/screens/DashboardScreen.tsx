@@ -45,11 +45,11 @@ export function DashboardScreen({ navigation }: DashboardScreenProps) {
       <Text style={styles.title}>{t('dashboardTitle')}</Text>
       <Text style={styles.subtitle}>{t('dashboardSubtitle')}</Text>
 
-      <View style={styles.card}>
+      <Pressable accessibilityRole="button" onPress={() => navigation.navigate('TaxEstimate')} style={styles.card}>
         <Text style={styles.cardTitle}>{t('estimate')}</Text>
-        <Text style={styles.amount}>£0.00</Text>
+        <Text style={styles.amount}>{formatPenceAsPounds(Math.max(0, incomeSummary.totalPence - expenseSummary.totalPence))}</Text>
         <Text style={styles.muted}>{t('estimateEmpty')}</Text>
-      </View>
+      </Pressable>
 
       <View style={styles.card}>
         <Text style={styles.sectionTitle}>{t('setupTasks')}</Text>

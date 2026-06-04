@@ -245,12 +245,12 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E4-F3 — Mobile Estimate View
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Build `TaxEstimate` breakdown screen.
-- [ ] Show assumptions and caveats.
-- [ ] Show source chips.
-- [ ] Add accountant review prompt for high-risk cases.
+- [x] Build `TaxEstimate` breakdown screen.
+- [x] Show assumptions and caveats.
+- [x] Show source/API payload preview.
+- [x] Add accountant review prompt for high-risk cases.
 
 ## E5 — AI Assistant and Safety
 

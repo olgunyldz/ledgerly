@@ -69,6 +69,14 @@ Ledgerly's first build should prioritise a complete, narrow loop over broad feat
 5. Backend generates PDF and CSV.
 6. User downloads or shares pack.
 
+## Preview tax estimate
+
+1. User taps the dashboard tax estimate card.
+2. App reads local income and expense totals.
+3. App shows taxable profit preview and record breakdown.
+4. App shows cautious estimate copy and notes that accountant review is still required.
+5. App previews the deterministic estimate API payload before live estimate display is connected.
+
 ## Return user dashboard loop
 
 1. User opens app with an existing profile.
