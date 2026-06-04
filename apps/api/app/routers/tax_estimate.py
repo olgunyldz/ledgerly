@@ -1,23 +1,55 @@
-from fastapi import APIRouter
-from pydantic import BaseModel, Field
+from fastapi import APIRouter, HTTPException
+
+from app.schemas.tax_estimate import TaxEstimateRequest, TaxEstimateResponse
+from app.services.audit_service import build_audit_event
+from app.services.tax_rules_service import TaxRulesServiceError, estimate_self_employed_reserve
 
 router = APIRouter()
 
-class TaxEstimateRequest(BaseModel):
-    annual_profit: float = Field(ge=0)
-    tax_year: str = "2026/27"
 
-class TaxEstimateResponse(BaseModel):
-    annual_profit: float
-    estimated_tax_to_set_aside: float
-    note: str
+@router.post("", response_model=TaxEstimateResponse)
+def create_tax_estimate(payload: TaxEstimateRequest):
+    taxable_profit = round(payload.income - payload.expenses, 2)
 
-@router.post("/self-employed", response_model=TaxEstimateResponse)
-def estimate_self_employed_tax(payload: TaxEstimateRequest):
-    # Placeholder only. Replace with authoritative UK tax bands and NI rules.
-    suggested_reserve = payload.annual_profit * 0.25
+    try:
+        estimate = estimate_self_employed_reserve(
+            annual_profit=taxable_profit,
+            tax_year=payload.tax_year,
+        )
+    except TaxRulesServiceError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    audit_event = build_audit_event(
+        event_type="tax_estimate.calculated",
+        entity_type="tax_estimate",
+        entity_id=None,
+        metadata={
+            "tax_year": estimate["tax_year"],
+            "rule_version": estimate["rule_version"],
+            "inputs_snapshot": estimate["inputs_snapshot"],
+            "sources": estimate["sources"],
+        },
+    )
+
     return TaxEstimateResponse(
-        annual_profit=payload.annual_profit,
-        estimated_tax_to_set_aside=round(suggested_reserve, 2),
-        note="Placeholder estimate only. Implement official tax-year rules before production use."
+        tax_year=estimate["tax_year"],
+        rule_version=estimate["rule_version"],
+        inputs_snapshot=estimate["inputs_snapshot"],
+        taxable_profit=taxable_profit,
+        reserve_percent=estimate["reservePercent"],
+        estimate={
+            "estimated_income_tax": estimate["breakdown"]["estimatedIncomeTax"],
+            "estimated_class4_national_insurance": estimate["breakdown"]["estimatedClass4NationalInsurance"],
+        },
+        total_estimate=estimate["estimatedTaxToSetAside"],
+        assumptions=estimate["assumptions"],
+        warnings=estimate["warnings"],
+        sources=estimate["sources"],
+        audit_event={
+            "event_type": audit_event.event_type,
+            "entity_type": audit_event.entity_type,
+            "entity_id": audit_event.entity_id,
+            "metadata": audit_event.metadata,
+            "created_at": audit_event.created_at.isoformat(),
+        },
     )

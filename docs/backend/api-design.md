@@ -49,7 +49,7 @@ Request:
 
 ```json
 {
-  "tax_year": "2026-27",
+  "tax_year": "2025-26",
   "income": 40000,
   "expenses": 8000,
   "profile_type": "self_employed"
@@ -60,17 +60,32 @@ Response:
 
 ```json
 {
-  "tax_year": "2026-27",
-  "rule_version": "2026-27.0",
-  "estimate": {
-    "taxable_profit": 32000,
-    "income_tax_estimate": 0,
-    "national_insurance_estimate": 0,
-    "total_estimate": 0
+  "tax_year": "2025-26",
+  "rule_version": "2025-26.0",
+  "inputs_snapshot": {
+    "annualProfit": 32000,
+    "taxYear": "2025-26"
   },
-  "assumptions": []
+  "taxable_profit": 32000,
+  "reserve_percent": 0.16,
+  "estimate": {
+    "estimated_income_tax": 3886,
+    "estimated_class4_national_insurance": 1165.8
+  },
+  "total_estimate": 5051.8,
+  "assumptions": [],
+  "warnings": [],
+  "sources": [],
+  "audit_event": {
+    "event_type": "tax_estimate.calculated",
+    "entity_type": "tax_estimate",
+    "entity_id": null,
+    "metadata": {}
+  }
 }
 ```
+
+The endpoint only supports `profile_type: "self_employed"` until additional deterministic rule coverage exists. It calls the shared tax rules package through `apps/api/app/services/tax_rules_service.py`, and returns an audit event payload for persistence by the future audit repository.
 
 ## Versioning
 
