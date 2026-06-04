@@ -1,13 +1,13 @@
-# TaxBridge AI
+# Ledgerly
 
-Multi-language AI assistant for UK self-employed taxpayers, landlords, contractors and small businesses.
+Calm, multi-language UK tax record and preparation assistant for self-employed taxpayers, landlords, contractors and small businesses.
 
-> Working name: **TaxBridge AI**  
-> Goal: Help users understand UK tax in their own language while preserving official English tax terms.
+> Product name: **Ledgerly**  
+> Goal: Help users keep clean records, understand UK tax in their own language and prepare accountant-ready summaries.
 
 ## Product positioning
 
-TaxBridge AI is designed for users who find the UK tax system difficult, especially multilingual users, sole traders, gig workers, freelancers, contractors and landlords. The app helps them organise records, understand tax concepts, estimate tax and prepare accountant-ready summaries.
+Ledgerly is designed for users who find the UK tax system difficult, especially multilingual users, sole traders, gig workers, freelancers, contractors and landlords. The app helps them organise records, understand tax concepts, estimate tax and prepare accountant-ready summaries.
 
 ## Core product principle
 

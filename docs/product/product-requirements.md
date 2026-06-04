@@ -2,7 +2,14 @@
 
 ## Product statement
 
-TaxBridge AI helps UK taxpayers understand, organise and prepare their tax information in their own language while preserving official English tax terminology.
+Ledgerly helps UK taxpayers keep clean records, understand and prepare their tax information in their own language, and preserve official English tax terminology where it matters.
+
+## Product identity
+
+- **Name:** Ledgerly
+- **Category:** Multi-language UK tax record and preparation assistant
+- **Core promise:** Keep clear records, understand your tax position and prepare accountant-ready summaries.
+- **Trust stance:** Ledgerly explains and organises; deterministic rules calculate; high-risk cases escalate to accountant review.
 
 ## MVP audience
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
+import { colors, radius, spacing, typography } from '../theme/tokens';
 
 export function HomeScreen() {
   const { t, i18n } = useTranslation();
@@ -36,16 +37,36 @@ export function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  wrapper: { flex: 1, padding: 24, justifyContent: 'center' },
-  title: { fontSize: 34, fontWeight: '700', marginBottom: 8 },
-  subtitle: { fontSize: 17, color: '#4b5563', marginBottom: 24 },
-  card: { backgroundColor: 'white', borderRadius: 18, padding: 20, marginBottom: 18 },
-  cardTitle: { fontSize: 16, color: '#6b7280' },
-  amount: { fontSize: 36, fontWeight: '700', marginVertical: 8 },
-  muted: { color: '#6b7280', lineHeight: 20 },
-  button: { backgroundColor: '#111827', padding: 16, borderRadius: 14, alignItems: 'center', marginBottom: 12 },
-  buttonText: { color: 'white', fontWeight: '700' },
-  secondaryButton: { backgroundColor: 'white', padding: 16, borderRadius: 14, alignItems: 'center' },
-  secondaryButtonText: { color: '#111827', fontWeight: '700' },
-  languageButton: { marginTop: 24, alignItems: 'center' }
+  wrapper: { flex: 1, padding: spacing.lg, justifyContent: 'center', backgroundColor: colors.paper },
+  title: { fontSize: 34, fontWeight: '700', marginBottom: spacing.sm, color: colors.ink },
+  subtitle: { fontSize: 17, color: colors.slate, marginBottom: spacing.lg, lineHeight: 24 },
+  card: {
+    backgroundColor: colors.surface,
+    borderRadius: radius.md,
+    borderColor: colors.line,
+    borderWidth: 1,
+    padding: 20,
+    marginBottom: 18,
+  },
+  cardTitle: { fontSize: typography.body, color: colors.slate },
+  amount: { fontSize: 36, fontWeight: '700', marginVertical: spacing.sm, color: colors.ink },
+  muted: { color: colors.slate, lineHeight: 20 },
+  button: {
+    backgroundColor: colors.ledgerGreen,
+    padding: spacing.md,
+    borderRadius: radius.md,
+    alignItems: 'center',
+    marginBottom: spacing.md,
+  },
+  buttonText: { color: colors.surface, fontWeight: '700' },
+  secondaryButton: {
+    backgroundColor: colors.surface,
+    borderColor: colors.line,
+    borderWidth: 1,
+    padding: spacing.md,
+    borderRadius: radius.md,
+    alignItems: 'center',
+  },
+  secondaryButtonText: { color: colors.ink, fontWeight: '700' },
+  languageButton: { marginTop: spacing.lg, alignItems: 'center' }
 });

@@ -1,10 +1,10 @@
-# AGENTS.md — TaxBridge AI Operating Manual
+# AGENTS.md — Ledgerly Operating Manual
 
 This file tells AI coding agents and human contributors how to work in this repository.
 
 ## Product context
 
-TaxBridge AI is a multi-language UK tax assistant for self-employed workers, landlords, contractors and small businesses. The product explains UK tax in the user's preferred language while keeping official UK tax terms visible in English.
+Ledgerly is a multi-language UK tax assistant for self-employed workers, landlords, contractors and small businesses. The product explains UK tax in the user's preferred language while keeping official UK tax terms visible in English.
 
 ## Non-negotiable principles
 
@@ -124,4 +124,3 @@ Use conventional commits:
 - `fix(tax-rules): correct class 4 nic threshold`
 - `docs(ux): update screen map`
 - `chore(ci): add lint job`
-

@@ -4,8 +4,8 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   en: {
     translation: {
-      title: 'TaxBridge AI',
-      subtitle: 'Understand UK tax in your own language.',
+      title: 'Ledgerly',
+      subtitle: 'Keep clean records and understand UK tax in your own language.',
       estimate: 'Tax estimate',
       expenses: 'Expenses',
       ask: 'Ask the tax assistant',
@@ -15,8 +15,8 @@ const resources = {
   },
   tr: {
     translation: {
-      title: 'TaxBridge AI',
-      subtitle: 'UK vergi sistemini kendi dilinde anla.',
+      title: 'Ledgerly',
+      subtitle: 'Kayıtlarını düzenli tut, UK vergi sistemini kendi dilinde anla.',
       estimate: 'Vergi tahmini',
       expenses: 'Giderler',
       ask: 'Vergi asistanına sor',
