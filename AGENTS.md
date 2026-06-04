@@ -109,6 +109,16 @@ When planning, implementing or reviewing work:
 - Keep `docs/roadmap/current-plan.md` updated when current iteration scope, milestone status, blockers or risks change.
 - Mention backlog updates in the final response whenever they were changed.
 
+## Git workflow
+
+Use short-lived branches when the work benefits from isolation.
+
+- Create a new branch before starting substantial features, risky refactors, multi-file implementation work, experiments or changes that may take more than one focused turn.
+- Small documentation-only updates, typo fixes and direct user-requested quick commits may stay on the current branch when the worktree is clean.
+- Branch names should be concise and conventional, for example `feat/mobile-navigation-shell`, `docs/backlog-standards` or `fix/tax-estimate-rounding`.
+- Do not switch branches with uncommitted user work present unless the user explicitly confirms how to handle it.
+- Mention the active branch in the final response when a branch was created or changed.
+
 ## Required update matrix
 
 | Change type | Required docs/files to update |

@@ -318,3 +318,4 @@ No known bugs currently tracked.
 - [x] Add bug register and agent rules for tracking discovered, fixed and verified bugs.
 - [x] Add ID, priority, milestone, Definition of Ready, acceptance criteria and progress report standards.
 - [x] Add current iteration and milestone planning view.
+- [x] Add agent rules for creating short-lived branches when work needs isolation.
