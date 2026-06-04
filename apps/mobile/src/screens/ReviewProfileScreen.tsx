@@ -4,12 +4,12 @@ import { OnboardingStepScreen } from '../components/OnboardingStepScreen';
 import type { RootStackParamList } from '../navigation/routes';
 
 type ReviewProfileScreenProps = NativeStackScreenProps<RootStackParamList, 'ReviewProfile'> & {
-  onCompleteSetup: () => void;
+  onCompleteSetup: () => Promise<void>;
 };
 
 export function ReviewProfileScreen({ navigation, onCompleteSetup }: ReviewProfileScreenProps) {
-  const completeSetup = () => {
-    onCompleteSetup();
+  const completeSetup = async () => {
+    await onCompleteSetup();
     navigation.reset({ index: 0, routes: [{ name: 'Dashboard' }] });
   };
 

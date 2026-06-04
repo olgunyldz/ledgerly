@@ -5,11 +5,17 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { OnboardingStepScreen } from '../components/OnboardingStepScreen';
 import type { RootStackParamList } from '../navigation/routes';
 import { colors, radius, spacing, typography } from '../theme/tokens';
+import { setStoredLanguage, type SupportedLanguage } from '../lib/preferences';
 
 type LanguageSelectScreenProps = NativeStackScreenProps<RootStackParamList, 'LanguageSelect'>;
 
 export function LanguageSelectScreen({ navigation }: LanguageSelectScreenProps) {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const selectLanguage = async (language: SupportedLanguage) => {
+    await setStoredLanguage(language);
+    await i18n.changeLanguage(language);
+  };
 
   return (
     <OnboardingStepScreen
@@ -22,11 +28,11 @@ export function LanguageSelectScreen({ navigation }: LanguageSelectScreenProps) 
       onBack={() => navigation.goBack()}
     >
       <View style={styles.languageCard}>
-        <Pressable accessibilityRole="button" onPress={() => i18n.changeLanguage('en')} style={styles.languageChoice}>
-          <Text style={styles.languageChoiceText}>English</Text>
+        <Pressable accessibilityRole="button" onPress={() => selectLanguage('en')} style={styles.languageChoice}>
+          <Text style={styles.languageChoiceText}>{t('languageEnglish')}</Text>
         </Pressable>
-        <Pressable accessibilityRole="button" onPress={() => i18n.changeLanguage('tr')} style={styles.languageChoice}>
-          <Text style={styles.languageChoiceText}>Türkçe</Text>
+        <Pressable accessibilityRole="button" onPress={() => selectLanguage('tr')} style={styles.languageChoice}>
+          <Text style={styles.languageChoiceText}>{t('languageTurkish')}</Text>
         </Pressable>
       </View>
     </OnboardingStepScreen>

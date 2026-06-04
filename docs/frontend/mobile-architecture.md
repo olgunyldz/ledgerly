@@ -38,7 +38,7 @@ features/transactions
 
 - Server state: TanStack Query.
 - Local UI state: React state.
-- Cross-screen app preferences: lightweight store only if needed.
+- Cross-screen app preferences: AsyncStorage via `apps/mobile/src/lib/preferences.ts`.
 - Do not duplicate backend tax calculations in mobile state.
 
 ## Navigation
@@ -47,7 +47,7 @@ features/transactions
 - `apps/mobile/src/navigation/routes.ts` is the source of truth for route names and params.
 - First-run screens are route-level files in `apps/mobile/src/screens/`.
 - Shared onboarding layout belongs in `apps/mobile/src/components/OnboardingStepScreen.tsx`.
-- Setup-complete state is currently in memory and must move to persisted app preferences before private beta.
+- Setup-complete state and selected language are persisted through `apps/mobile/src/lib/preferences.ts`.
 
 ## API client rules
 

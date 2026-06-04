@@ -143,11 +143,11 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E1-F3 — Navigation Shell
 
-**Status:** In Progress
+**Status:** Done
 
 - [x] Replace temporary screen state with React Navigation stack.
 - [x] Add screen files for each first-run route.
-- [ ] Add persistent setup-complete state.
+- [x] Add persistent setup-complete state.
 - [x] Add route-level accessibility titles.
 
 ## E2 — Onboarding and Tax Profile
@@ -160,7 +160,7 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 - [x] Add English and Turkish onboarding copy.
 - [x] Add temporary language selection step.
-- [ ] Persist selected language.
+- [x] Persist selected language.
 - [ ] Add official English tax terms visibility preference.
 - [ ] Add multilingual copy QA checklist.
 

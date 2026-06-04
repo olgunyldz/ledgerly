@@ -17,13 +17,58 @@ import { ReviewProfileScreen } from '../screens/ReviewProfileScreen';
 import { DashboardScreen } from '../screens/DashboardScreen';
 import { AssistantScreen } from '../screens/AssistantScreen';
 import { DocumentsScreen } from '../screens/DocumentsScreen';
+import { getSetupComplete, getStoredLanguage, setSetupComplete } from '../lib/preferences';
+import { RestoringPreferencesScreen } from '../screens/RestoringPreferencesScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export function AppNavigator() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [isRestoringPreferences, setIsRestoringPreferences] = React.useState(true);
   const [hasCompletedSetup, setHasCompletedSetup] = React.useState(false);
   const initialRouteName = hasCompletedSetup ? 'Dashboard' : 'Welcome';
+
+  React.useEffect(() => {
+    let isMounted = true;
+
+    async function restorePreferences() {
+      try {
+        const [storedLanguage, storedSetupComplete] = await Promise.all([
+          getStoredLanguage(),
+          getSetupComplete(),
+        ]);
+
+        if (!isMounted) {
+          return;
+        }
+
+        if (storedLanguage) {
+          await i18n.changeLanguage(storedLanguage);
+        }
+
+        setHasCompletedSetup(storedSetupComplete);
+      } finally {
+        if (isMounted) {
+          setIsRestoringPreferences(false);
+        }
+      }
+    }
+
+    restorePreferences();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [i18n]);
+
+  const completeSetup = async () => {
+    await setSetupComplete(true);
+    setHasCompletedSetup(true);
+  };
+
+  if (isRestoringPreferences) {
+    return <RestoringPreferencesScreen />;
+  }
 
   return (
     <NavigationContainer>
@@ -46,7 +91,7 @@ export function AppNavigator() {
         <Stack.Screen name="IncomeSources" component={IncomeSourcesScreen} options={{ title: t('incomeSourcesHeader') }} />
         <Stack.Screen name="ExpenseHabits" component={ExpenseHabitsScreen} options={{ title: t('expenseHabitsHeader') }} />
         <Stack.Screen name="ReviewProfile" options={{ title: t('reviewProfileHeader') }}>
-          {(props) => <ReviewProfileScreen {...props} onCompleteSetup={() => setHasCompletedSetup(true)} />}
+          {(props) => <ReviewProfileScreen {...props} onCompleteSetup={completeSetup} />}
         </Stack.Screen>
         <Stack.Screen name="Dashboard" component={DashboardScreen} options={{ title: t('dashboardHeader') }} />
         <Stack.Screen name="Assistant" component={AssistantScreen} options={{ title: t('assistantTitle') }} />

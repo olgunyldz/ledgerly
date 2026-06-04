@@ -29,11 +29,13 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Onboarding routes split into route-level screen files.
 - Mobile dependencies installed.
 - `npm run typecheck` restored and passing.
+- Selected language and setup-complete state persisted with AsyncStorage.
 
 ### Next
 
-- Persist selected language and setup-complete state.
 - Add CI lint and test commands.
+- Add official English tax terms visibility preference.
+- Save tax profile locally before backend persistence exists.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
 ### Blocked
@@ -42,7 +44,6 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 
 ### Risks
 
-- Setup completion is still in memory and must be persisted before private beta.
 - `BUG-001` remains deferred because the non-breaking audit fix is unavailable.
 - Tax-related screens must remain placeholder-only until deterministic rule coverage and audit logging are in place.
 
@@ -59,7 +60,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 
 ### Private Beta
 
-- [ ] Persistent onboarding state
+- [x] Persistent onboarding state
 - [ ] Basic tax profile questionnaire
 - [ ] Income and expense entry
 - [ ] Deterministic tax estimate endpoint

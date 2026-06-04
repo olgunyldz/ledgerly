@@ -5,6 +5,7 @@ const resources = {
   en: {
     translation: {
       title: 'Ledgerly',
+      restoringPreferences: 'Loading your workspace preferences.',
       subtitle: 'Keep clean records and understand UK tax in your own language.',
       welcomeEyebrow: 'UK tax records, calmly organised',
       welcomeHeader: 'Welcome',
@@ -13,6 +14,8 @@ const resources = {
       languageTitle: 'Choose your language',
       languageHeader: 'Language',
       languageBody: 'You can use Ledgerly in your preferred language while keeping official English tax terms visible.',
+      languageEnglish: 'English',
+      languageTurkish: 'Turkish',
       signInTitle: 'Create your secure workspace',
       signInHeader: 'Secure workspace',
       signInBody: 'For now this is a setup placeholder. The real app will protect records before saving personal tax data.',
@@ -62,6 +65,7 @@ const resources = {
   tr: {
     translation: {
       title: 'Ledgerly',
+      restoringPreferences: 'Çalışma alanı tercihlerin yükleniyor.',
       subtitle: 'Kayıtlarını düzenli tut, UK vergi sistemini kendi dilinde anla.',
       welcomeEyebrow: 'UK vergi kayıtları, sakin ve düzenli',
       welcomeHeader: 'Hoş geldin',
@@ -70,6 +74,8 @@ const resources = {
       languageTitle: 'Dilini seç',
       languageHeader: 'Dil',
       languageBody: 'Ledgerly uygulamasını tercih ettiğin dilde kullanabilir, resmi İngilizce vergi terimlerini görünür tutabilirsin.',
+      languageEnglish: 'İngilizce',
+      languageTurkish: 'Türkçe',
       signInTitle: 'Güvenli çalışma alanını oluştur',
       signInHeader: 'Güvenli alan',
       signInBody: 'Şimdilik bu bir kurulum yer tutucusu. Gerçek uygulama kişisel vergi verilerini kaydetmeden önce kayıtları koruyacak.',
