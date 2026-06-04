@@ -280,12 +280,12 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E6-F1 — Export Readiness
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Build completeness checklist.
-- [ ] Flag missing records and unreviewed documents.
-- [ ] Flag high-risk assumptions.
-- [ ] Require user confirmation before export.
+- [x] Build completeness checklist.
+- [x] Flag missing records and unreviewed documents.
+- [x] Flag high-risk assumptions.
+- [x] Require user confirmation before export.
 
 ### E6-F2 — PDF and CSV Export
 

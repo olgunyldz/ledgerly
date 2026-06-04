@@ -67,6 +67,10 @@ export function TaxEstimateScreen({ navigation }: TaxEstimateScreenProps) {
       <Pressable accessibilityRole="button" onPress={() => navigation.navigate('Transactions')} style={styles.button}>
         <Text style={styles.buttonText}>{t('reviewTransactions')}</Text>
       </Pressable>
+
+      <Pressable accessibilityRole="button" onPress={() => navigation.navigate('AccountantPack')} style={styles.secondaryButton}>
+        <Text style={styles.secondaryButtonText}>{t('prepareAccountantPack')}</Text>
+      </Pressable>
     </ScrollView>
   );
 }
@@ -104,7 +108,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.ledgerGreen,
     borderRadius: radius.md,
+    marginBottom: spacing.md,
     padding: spacing.md,
   },
   buttonText: { color: colors.surface, fontWeight: '700' },
+  secondaryButton: {
+    alignItems: 'center',
+    backgroundColor: colors.surface,
+    borderColor: colors.line,
+    borderRadius: radius.md,
+    borderWidth: 1,
+    padding: spacing.md,
+  },
+  secondaryButtonText: { color: colors.ink, fontWeight: '700' },
 });

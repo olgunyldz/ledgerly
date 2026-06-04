@@ -21,6 +21,7 @@
 - [ ] Rule version updated where needed.
 - [ ] Audit logging verified.
 - [ ] High-risk assistant escalation tested.
+- [ ] Accountant pack export remains gated behind explicit user confirmation.
 
 ## Security/privacy
 
