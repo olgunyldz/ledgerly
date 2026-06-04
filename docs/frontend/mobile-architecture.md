@@ -42,6 +42,7 @@ features/transactions
 - Draft tax profile state: AsyncStorage via `apps/mobile/src/lib/taxProfile.ts` until backend persistence exists.
 - Draft income records: AsyncStorage via `apps/mobile/src/lib/incomeRecords.ts` until backend persistence exists.
 - Draft expense records: AsyncStorage via `apps/mobile/src/lib/expenseRecords.ts` until backend persistence exists.
+- Tax estimate preview state: derived from local records via `apps/mobile/src/lib/taxEstimate.ts` until mobile is wired to `POST /v1/tax-estimates`.
 - Do not duplicate backend tax calculations in mobile state.
 
 ## Navigation

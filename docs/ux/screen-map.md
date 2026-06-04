@@ -51,7 +51,7 @@ After setup, the primary app loop is `Dashboard` -> `Transactions` / `Documents`
 | Add Expense | Capture expense | amount, date, merchant, category, business percentage, allowable expense helper |
 | Documents | Uploaded documents | empty state, receipt upload placeholder, confirmation rule |
 | Document Review | Confirm extracted data | extracted field placeholder, confirmation warning |
-| Tax Estimate | Explain estimate | breakdown, assumptions, caveats |
+| Tax Estimate | Explain estimate | taxable profit preview, record breakdown, assumptions, API payload caveat |
 | Accountant Pack | Export summary | tax year selector, PDF/CSV actions |
 | Deadlines | Show upcoming obligations | deadline list, reminders |
 | Settings | Account and preferences | language, privacy, export/delete data |
