@@ -30,11 +30,12 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Mobile dependencies installed.
 - `npm run typecheck` restored and passing.
 - Selected language and setup-complete state persisted with AsyncStorage.
+- Official English tax terms visibility preference added and persisted.
 
 ### Next
 
 - Add CI lint and test commands.
-- Add official English tax terms visibility preference.
+- Add multilingual copy QA checklist.
 - Save tax profile locally before backend persistence exists.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 

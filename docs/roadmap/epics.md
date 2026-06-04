@@ -161,7 +161,7 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 - [x] Add English and Turkish onboarding copy.
 - [x] Add temporary language selection step.
 - [x] Persist selected language.
-- [ ] Add official English tax terms visibility preference.
+- [x] Add official English tax terms visibility preference.
 - [ ] Add multilingual copy QA checklist.
 
 ### E2-F2 — Tax Profile Questionnaire

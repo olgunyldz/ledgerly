@@ -47,7 +47,7 @@ features/transactions
 - `apps/mobile/src/navigation/routes.ts` is the source of truth for route names and params.
 - First-run screens are route-level files in `apps/mobile/src/screens/`.
 - Shared onboarding layout belongs in `apps/mobile/src/components/OnboardingStepScreen.tsx`.
-- Setup-complete state and selected language are persisted through `apps/mobile/src/lib/preferences.ts`.
+- Setup-complete state, selected language and English tax-term visibility are persisted through `apps/mobile/src/lib/preferences.ts`.
 
 ## API client rules
 
