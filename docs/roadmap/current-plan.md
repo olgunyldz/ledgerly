@@ -23,6 +23,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - `E4-F2`: Estimate API
 - `E4-F3`: Mobile Estimate View
 - `E5-F1`: Assistant UI
+- `E5-F2`: Assistant Backend
 - `E7-F2`: QA and Release baseline
 
 ### Done
@@ -54,10 +55,11 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Estimate API exposes `POST /v1/tax-estimates` with rule metadata, source references and an audit event payload.
 - Mobile `TaxEstimate` screen shows taxable profit preview, assumptions/caveats and API payload preview from local records.
 - Assistant UI shows starter questions, source chips and high-risk accountant review prompt.
+- Assistant backend exposes deterministic starter guardrails with prompt version, source contracts and high-risk escalation.
 
 ### Next
 
-- Start `E5-F2`: Assistant Backend.
+- Start `E6-F1`: Export Readiness.
 - Add CI lint and test commands.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
