@@ -98,6 +98,9 @@ Must update:
 When planning, implementing or reviewing work:
 
 - Add every accepted recommendation, follow-up idea or newly discovered work item to `docs/roadmap/epics.md` as an epic, feature or task.
+- Add every discovered bug, regression or known defect to the bug register in `docs/roadmap/epics.md`.
+- Bug entries must include status, severity, source, affected area and the expected fix or next diagnostic step.
+- Update bug status when fixed, verified, blocked or intentionally deferred.
 - Update completed tasks from `[ ]` to `[x]` before finishing the turn.
 - Update feature and epic status labels when their task state changes.
 - Add blockers with `Blocked` status and a short note describing what is needed to unblock them.
@@ -110,6 +113,8 @@ When planning, implementing or reviewing work:
 |---|---|
 | Any accepted recommendation or follow-up task | `docs/roadmap/epics.md` |
 | Completed epic, feature or task | `docs/roadmap/epics.md` status/checklist update |
+| New bug, regression or known defect | `docs/roadmap/epics.md` bug register |
+| Fixed or verified bug | `docs/roadmap/epics.md` bug status update |
 | New screen | `docs/ux/screen-map.md`, `docs/ux/user-flows.md`, mobile route types, i18n keys |
 | New API endpoint | `docs/backend/api-design.md`, schemas, tests, OpenAPI notes |
 | New tax rule | `docs/tax/tax-rules-strategy.md`, source reference, tests, package changelog |
@@ -126,7 +131,7 @@ A change is not done until:
 
 - Code builds and tests pass.
 - Relevant docs are updated.
-- `docs/roadmap/epics.md` reflects any new, changed, blocked or completed epic/feature/task.
+- `docs/roadmap/epics.md` reflects any new, changed, blocked or completed epic/feature/task/bug.
 - New or changed user-facing copy has i18n keys.
 - Tax-impacting logic has deterministic tests.
 - Security/privacy impact has been considered.

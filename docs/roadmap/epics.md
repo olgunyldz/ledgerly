@@ -5,8 +5,30 @@ This file is the working delivery backlog. Keep items grouped as:
 - **Epic:** A major product outcome.
 - **Feature:** A shippable capability inside an epic.
 - **Task:** A concrete implementation or documentation step.
+- **Bug:** A known defect, regression or broken expectation.
 
 Use status labels: `Todo`, `In Progress`, `Blocked`, `Done`.
+
+Bug status labels are `Open`, `In Progress`, `Blocked`, `Fixed`, `Verified`, `Deferred`.
+
+## Bug Register
+
+Add bugs here when they are discovered. Keep entries concise and actionable.
+
+### Bug Template
+
+| Field | Value |
+|---|---|
+| Status | Open |
+| Severity | Low, Medium, High or Critical |
+| Source | User report, Agent discovery, Test failure or Production signal |
+| Affected area | Mobile, API, Tax rules, AI, Docs or Infrastructure |
+| Summary | Short description of the broken behaviour |
+| Next step | Expected fix, diagnostic step or reason for deferral |
+
+### Known Bugs
+
+No known bugs currently tracked.
 
 ## Epic 1 — Product Identity and UX Foundation
 
@@ -213,3 +235,4 @@ Use status labels: `Todo`, `In Progress`, `Blocked`, `Done`.
 - [x] Link backlog from documentation index.
 - [x] Add agent rule requiring accepted recommendations to be added to the backlog.
 - [x] Add agent rule requiring completed epics, features and tasks to be updated in the backlog.
+- [x] Add bug register and agent rules for tracking discovered, fixed and verified bugs.
