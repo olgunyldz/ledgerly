@@ -35,3 +35,7 @@ Required:
 - Offline state.
 - Long translated strings.
 - Dark mode when supported.
+
+## Multilingual QA
+
+Use `docs/qa/multilingual-copy-checklist.md` for onboarding, assistant and tax-sensitive copy changes.

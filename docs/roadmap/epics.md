@@ -156,13 +156,13 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E2-F1 — Language Selection
 
-**Status:** In Progress
+**Status:** Done
 
 - [x] Add English and Turkish onboarding copy.
 - [x] Add temporary language selection step.
 - [x] Persist selected language.
 - [x] Add official English tax terms visibility preference.
-- [ ] Add multilingual copy QA checklist.
+- [x] Add multilingual copy QA checklist.
 
 ### E2-F2 — Tax Profile Questionnaire
 

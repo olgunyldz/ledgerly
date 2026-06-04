@@ -46,6 +46,7 @@
 
 - `security/security-model.md`
 - `qa/test-strategy.md`
+- `qa/multilingual-copy-checklist.md`
 - `operations/release-checklist.md`
 - `compliance-checklist.md`
 - `roadmap/roadmap.md`
