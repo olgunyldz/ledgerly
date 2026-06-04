@@ -50,4 +50,5 @@
 - `compliance-checklist.md`
 - `roadmap/roadmap.md`
 - `roadmap/epics.md`
+- `roadmap/current-plan.md`
 - `roadmap/tasks.md`

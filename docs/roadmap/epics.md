@@ -11,6 +11,86 @@ Use status labels: `Todo`, `In Progress`, `Blocked`, `Done`.
 
 Bug status labels are `Open`, `In Progress`, `Blocked`, `Fixed`, `Verified`, `Deferred`.
 
+## Backlog Standards
+
+Every new epic, feature, task and bug should be easy to discuss, commit against and verify.
+
+### ID Format
+
+- Epics use `E<number>`, for example `E2`.
+- Features use `E<number>-F<number>`, for example `E2-F1`.
+- Tasks use `E<number>-F<number>-T<number>`, for example `E2-F1-T3`.
+- Bugs use `BUG-<number>`, for example `BUG-001`.
+- Commit messages may reference IDs in the body when useful, but should still follow conventional commits.
+
+### Priority
+
+- `P0`: Required before private beta.
+- `P1`: Required for MVP launch.
+- `P2`: Valuable after MVP or for growth.
+- `P3`: Nice-to-have or research.
+
+### Milestones
+
+- `Foundation`: Product identity, architecture, project management and skeleton app.
+- `Private Beta`: Safe internal/private test with core setup, records and estimate loop.
+- `MVP Launch`: Public-ready core product with assistant, export and QA coverage.
+- `Post-MVP`: Integrations, additional languages and growth features.
+
+### Definition of Ready
+
+Do not start a task unless:
+
+- The user outcome is clear.
+- Scope and affected area are identified.
+- Acceptance criteria are written.
+- Required docs and tests are known.
+- Privacy, security and tax impact have been considered.
+- Any blocker is documented with `Blocked` status.
+
+### Acceptance Criteria
+
+Each feature or implementation task should include concise acceptance criteria. Use this format when adding new work:
+
+```text
+**ID:** E2-F1-T3
+**Status:** Todo
+**Priority:** P0
+**Milestone:** Private Beta
+**Owner:** Agent
+**Acceptance criteria:**
+- User can complete the expected action.
+- Required docs and i18n keys are updated.
+- Relevant checks pass or a blocker is logged.
+```
+
+### Progress Report Format
+
+Use this format for weekly or milestone summaries:
+
+```text
+## Progress Report — YYYY-MM-DD
+
+**Done**
+- Completed work with IDs.
+
+**Next**
+- Planned work with IDs.
+
+**Blocked**
+- Blocker, owner and next step.
+
+**Risks**
+- Delivery, tax, privacy, security or quality risks.
+```
+
+### Bug Severity
+
+- `Critical`: Data loss, hidden HMRC submission risk, security/privacy breach or materially wrong tax output.
+- `High`: Broken core flow, incorrect calculation display or inaccessible key action.
+- `Medium`: Important workflow issue with a workaround.
+- `Low`: Cosmetic, copy or minor polish issue.
+
 ## Bug Register
 
 Add bugs here when they are discovered. Keep entries concise and actionable.
@@ -30,11 +110,11 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 No known bugs currently tracked.
 
-## Epic 1 — Product Identity and UX Foundation
+## E1 — Product Identity and UX Foundation
 
 **Outcome:** Ledgerly has a clear product identity, route map and reusable mobile UX foundation.
 
-### Feature 1.1 — Ledgerly Brand Foundation
+### E1-F1 — Ledgerly Brand Foundation
 
 **Status:** Done
 
@@ -43,7 +123,7 @@ No known bugs currently tracked.
 - [x] Add Ledgerly colour palette and shape rules to the design system.
 - [x] Apply Ledgerly theme tokens to the mobile shell.
 
-### Feature 1.2 — MVP User Flow Definition
+### E1-F2 — MVP User Flow Definition
 
 **Status:** Done
 
@@ -52,7 +132,7 @@ No known bugs currently tracked.
 - [x] Align `RootStackParamList` with MVP screens.
 - [x] Document setup, record, estimate and export flows.
 
-### Feature 1.3 — Navigation Shell
+### E1-F3 — Navigation Shell
 
 **Status:** Todo
 
@@ -61,11 +141,11 @@ No known bugs currently tracked.
 - [ ] Add persistent setup-complete state.
 - [ ] Add route-level accessibility titles.
 
-## Epic 2 — Onboarding and Tax Profile
+## E2 — Onboarding and Tax Profile
 
 **Outcome:** Users can select language, create a basic tax profile and land on a useful dashboard.
 
-### Feature 2.1 — Language Selection
+### E2-F1 — Language Selection
 
 **Status:** In Progress
 
@@ -75,7 +155,7 @@ No known bugs currently tracked.
 - [ ] Add official English tax terms visibility preference.
 - [ ] Add multilingual copy QA checklist.
 
-### Feature 2.2 — Tax Profile Questionnaire
+### E2-F2 — Tax Profile Questionnaire
 
 **Status:** Todo
 
@@ -87,7 +167,7 @@ No known bugs currently tracked.
 - [ ] Add `ReviewProfile` confirmation screen.
 - [ ] Save tax profile locally before backend persistence exists.
 
-### Feature 2.3 — Starter Dashboard
+### E2-F3 — Starter Dashboard
 
 **Status:** In Progress
 
@@ -97,11 +177,11 @@ No known bugs currently tracked.
 - [ ] Add dashboard cards for income, expenses and documents.
 - [ ] Add next-best-action logic from profile state.
 
-## Epic 3 — Records and Documents
+## E3 — Records and Documents
 
 **Outcome:** Users can capture income, expenses and documents with enough structure for cautious tax estimates.
 
-### Feature 3.1 — Income Records
+### E3-F1 — Income Records
 
 **Status:** Todo
 
@@ -111,7 +191,7 @@ No known bugs currently tracked.
 - [ ] Show confirmation summary before save.
 - [ ] Add local test fixtures for income records.
 
-### Feature 3.2 — Expense Records
+### E3-F2 — Expense Records
 
 **Status:** Todo
 
@@ -121,7 +201,7 @@ No known bugs currently tracked.
 - [ ] Show official term helper for allowable expenses.
 - [ ] Show confirmation summary before save.
 
-### Feature 3.3 — Document Intake
+### E3-F3 — Document Intake
 
 **Status:** Todo
 
@@ -130,11 +210,11 @@ No known bugs currently tracked.
 - [ ] Build `DocumentReview` placeholder for extracted fields.
 - [ ] Require user confirmation before creating records from documents.
 
-## Epic 4 — Deterministic Tax Estimate
+## E4 — Deterministic Tax Estimate
 
 **Outcome:** Ledgerly estimates tax using deterministic, versioned rules with source references.
 
-### Feature 4.1 — Tax Rules Package
+### E4-F1 — Tax Rules Package
 
 **Status:** Todo
 
@@ -143,7 +223,7 @@ No known bugs currently tracked.
 - [ ] Add source references for thresholds.
 - [ ] Add rule version metadata to calculation output.
 
-### Feature 4.2 — Estimate API
+### E4-F2 — Estimate API
 
 **Status:** Todo
 
@@ -152,7 +232,7 @@ No known bugs currently tracked.
 - [ ] Add audit event payload for tax-impacting calculations.
 - [ ] Document API contract.
 
-### Feature 4.3 — Mobile Estimate View
+### E4-F3 — Mobile Estimate View
 
 **Status:** Todo
 
@@ -161,11 +241,11 @@ No known bugs currently tracked.
 - [ ] Show source chips.
 - [ ] Add accountant review prompt for high-risk cases.
 
-## Epic 5 — AI Assistant and Safety
+## E5 — AI Assistant and Safety
 
 **Outcome:** Users can ask tax questions in their chosen language with grounded, cautious answers.
 
-### Feature 5.1 — Assistant UI
+### E5-F1 — Assistant UI
 
 **Status:** Todo
 
@@ -174,7 +254,7 @@ No known bugs currently tracked.
 - [ ] Show source chips in responses.
 - [ ] Show high-risk escalation prompt.
 
-### Feature 5.2 — Assistant Backend
+### E5-F2 — Assistant Backend
 
 **Status:** Todo
 
@@ -183,11 +263,11 @@ No known bugs currently tracked.
 - [ ] Add refusal and escalation rules.
 - [ ] Add evaluation fixtures for English and Turkish.
 
-## Epic 6 — Accountant Pack
+## E6 — Accountant Pack
 
 **Outcome:** Users can export a clear, reviewable pack for an accountant.
 
-### Feature 6.1 — Export Readiness
+### E6-F1 — Export Readiness
 
 **Status:** Todo
 
@@ -196,7 +276,7 @@ No known bugs currently tracked.
 - [ ] Flag high-risk assumptions.
 - [ ] Require user confirmation before export.
 
-### Feature 6.2 — PDF and CSV Export
+### E6-F2 — PDF and CSV Export
 
 **Status:** Todo
 
@@ -205,11 +285,11 @@ No known bugs currently tracked.
 - [ ] Generate PDF summary.
 - [ ] Add export history placeholder.
 
-## Epic 7 — Security, Privacy and Release Readiness
+## E7 — Security, Privacy and Release Readiness
 
 **Outcome:** Ledgerly can safely move toward private beta.
 
-### Feature 7.1 — Privacy and Auditability
+### E7-F1 — Privacy and Auditability
 
 **Status:** Todo
 
@@ -218,7 +298,7 @@ No known bugs currently tracked.
 - [ ] Log tax-impacting calculation inputs and rule versions.
 - [ ] Document privacy impact notes.
 
-### Feature 7.2 — QA and Release
+### E7-F2 — QA and Release
 
 **Status:** Todo
 
@@ -227,7 +307,7 @@ No known bugs currently tracked.
 - [ ] Add CI lint and test commands.
 - [ ] Add private beta release checklist.
 
-### Feature 7.3 — Backlog Hygiene
+### E7-F3 — Backlog Hygiene
 
 **Status:** Done
 
@@ -236,3 +316,5 @@ No known bugs currently tracked.
 - [x] Add agent rule requiring accepted recommendations to be added to the backlog.
 - [x] Add agent rule requiring completed epics, features and tasks to be updated in the backlog.
 - [x] Add bug register and agent rules for tracking discovered, fixed and verified bugs.
+- [x] Add ID, priority, milestone, Definition of Ready, acceptance criteria and progress report standards.
+- [x] Add current iteration and milestone planning view.

@@ -1,6 +1,6 @@
 # Tasks Backlog
 
-Use `docs/roadmap/epics.md` as the structured epic -> feature -> task backlog. This file is the priority snapshot for private beta and MVP planning.
+Use `docs/roadmap/epics.md` as the structured epic -> feature -> task backlog. Use `docs/roadmap/current-plan.md` for current iteration and milestone tracking. This file is the priority snapshot for private beta and MVP planning.
 
 ## P0 — Must have before private beta
 

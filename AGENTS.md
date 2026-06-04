@@ -98,6 +98,7 @@ Must update:
 When planning, implementing or reviewing work:
 
 - Add every accepted recommendation, follow-up idea or newly discovered work item to `docs/roadmap/epics.md` as an epic, feature or task.
+- New backlog items should include ID, status, priority, milestone, owner and acceptance criteria when they are actionable.
 - Add every discovered bug, regression or known defect to the bug register in `docs/roadmap/epics.md`.
 - Bug entries must include status, severity, source, affected area and the expected fix or next diagnostic step.
 - Update bug status when fixed, verified, blocked or intentionally deferred.
@@ -105,6 +106,7 @@ When planning, implementing or reviewing work:
 - Update feature and epic status labels when their task state changes.
 - Add blockers with `Blocked` status and a short note describing what is needed to unblock them.
 - Keep `docs/roadmap/tasks.md` as the priority snapshot; do not use it as the canonical structured backlog.
+- Keep `docs/roadmap/current-plan.md` updated when current iteration scope, milestone status, blockers or risks change.
 - Mention backlog updates in the final response whenever they were changed.
 
 ## Required update matrix
@@ -115,6 +117,7 @@ When planning, implementing or reviewing work:
 | Completed epic, feature or task | `docs/roadmap/epics.md` status/checklist update |
 | New bug, regression or known defect | `docs/roadmap/epics.md` bug register |
 | Fixed or verified bug | `docs/roadmap/epics.md` bug status update |
+| Current iteration, milestone, blocker or risk change | `docs/roadmap/current-plan.md` |
 | New screen | `docs/ux/screen-map.md`, `docs/ux/user-flows.md`, mobile route types, i18n keys |
 | New API endpoint | `docs/backend/api-design.md`, schemas, tests, OpenAPI notes |
 | New tax rule | `docs/tax/tax-rules-strategy.md`, source reference, tests, package changelog |
