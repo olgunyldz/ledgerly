@@ -214,12 +214,12 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E3-F3 — Document Intake
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Build `Documents` empty state.
-- [ ] Add receipt upload placeholder.
-- [ ] Build `DocumentReview` placeholder for extracted fields.
-- [ ] Require user confirmation before creating records from documents.
+- [x] Build `Documents` empty state.
+- [x] Add receipt upload placeholder.
+- [x] Build `DocumentReview` placeholder for extracted fields.
+- [x] Require user confirmation before creating records from documents.
 
 ## E4 — Deterministic Tax Estimate
 

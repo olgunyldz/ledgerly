@@ -18,6 +18,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - `E2-F3`: Starter Dashboard
 - `E3-F1`: Income Records
 - `E3-F2`: Expense Records
+- `E3-F3`: Document Intake
 - `E7-F2`: QA and Release baseline
 
 ### Done
@@ -43,10 +44,12 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Transactions shows saved local income records, empty state and income total.
 - AddExpense form saves local expense records with validation, allowable expense helper copy and review summary.
 - Transactions shows saved local expense records, empty state and expense total.
+- Documents empty state and receipt upload placeholder added.
+- DocumentReview placeholder shows extracted fields and explicit confirmation requirement.
 
 ### Next
 
-- Start `E3-F3`: Document Intake.
+- Start `E4-F1`: Tax Rules Package.
 - Add CI lint and test commands.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
