@@ -19,7 +19,8 @@ Use this whenever HMRC/GOV.UK updates thresholds, deadlines, allowances or calcu
 
 | Date | Tax year | Area | Source | Reviewer | Notes |
 |---|---|---|---|---|---|
-| TBD | TBD | TBD | TBD | TBD | Initial placeholder |
+| 2026-06-04 | 2025-26 | Income Tax allowances and bands | GOV.UK Income Tax rates and allowances for current and previous tax years | AI-assisted draft; accountant review required before production | Added `2025-26.0` constants and boundary tests. |
+| 2026-06-04 | 2025-26 | Self-employed Class 4 National Insurance | GOV.UK Self-employed National Insurance rates | AI-assisted draft; accountant review required before production | Added lower/upper profit limits, 6% main rate and 2% additional rate tests. |
 
 ## Release note template
 

@@ -227,12 +227,12 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E4-F1 — Tax Rules Package
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Review current self-employed tax rule coverage.
-- [ ] Add missing calculation tests.
-- [ ] Add source references for thresholds.
-- [ ] Add rule version metadata to calculation output.
+- [x] Review current self-employed tax rule coverage.
+- [x] Add missing calculation tests.
+- [x] Add source references for thresholds.
+- [x] Add rule version metadata to calculation output.
 
 ### E4-F2 — Estimate API
 

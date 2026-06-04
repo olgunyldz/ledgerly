@@ -19,6 +19,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - `E3-F1`: Income Records
 - `E3-F2`: Expense Records
 - `E3-F3`: Document Intake
+- `E4-F1`: Tax Rules Package
 - `E7-F2`: QA and Release baseline
 
 ### Done
@@ -46,10 +47,11 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Transactions shows saved local expense records, empty state and expense total.
 - Documents empty state and receipt upload placeholder added.
 - DocumentReview placeholder shows extracted fields and explicit confirmation requirement.
+- Tax rules package now has draft `2025-26.0` self-employed reserve estimate with source metadata and boundary tests.
 
 ### Next
 
-- Start `E4-F1`: Tax Rules Package.
+- Start `E4-F2`: Estimate API.
 - Add CI lint and test commands.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
@@ -60,7 +62,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 ### Risks
 
 - `BUG-001` remains deferred because the non-breaking audit fix is unavailable.
-- Tax-related screens must remain placeholder-only until deterministic rule coverage and audit logging are in place.
+- Tax-related screens must not show live estimates until the API adds audit logging and explicit calculation source display.
 
 ## Milestone Checklist
 
