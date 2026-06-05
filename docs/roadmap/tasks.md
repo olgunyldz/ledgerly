@@ -4,17 +4,17 @@ Use `docs/roadmap/epics.md` as the structured epic -> feature -> task backlog. U
 
 ## P0 — Must have before private beta
 
-- [ ] Implement app navigation shell.
-- [ ] Add language selection onboarding.
-- [ ] Build tax profile questionnaire.
-- [ ] Add income entry form.
-- [ ] Add expense entry form.
-- [ ] Implement backend tax estimate endpoint.
-- [ ] Add deterministic tests for tax rules.
+- [x] Implement app navigation shell.
+- [x] Add language selection onboarding.
+- [x] Build tax profile questionnaire.
+- [x] Add income entry form.
+- [x] Add expense entry form.
+- [x] Implement backend tax estimate endpoint.
+- [x] Add deterministic tests for tax rules.
 - [ ] Add audit event persistence.
 - [x] Define audit event input hash and rule version payload.
-- [ ] Add assistant chat screen.
-- [ ] Add safe assistant system prompt.
+- [x] Add assistant chat screen.
+- [x] Add safe assistant system prompt.
 - [ ] Add privacy-first analytics events.
 - [x] Add CI lint/test checks.
 

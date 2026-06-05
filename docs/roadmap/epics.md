@@ -166,7 +166,7 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E2-F2 — Tax Profile Questionnaire
 
-**Status:** In Progress
+**Status:** Done
 
 - [x] Add `TaxProfileIntro` screen.
 - [x] Add `ResidencyTaxYear` screen.
@@ -330,3 +330,43 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 - [x] Add ID, priority, milestone, Definition of Ready, acceptance criteria and progress report standards.
 - [x] Add current iteration and milestone planning view.
 - [x] Add agent rules for creating short-lived branches when work needs isolation.
+
+## E8 — Private Beta Hardening
+
+**Outcome:** Ledgerly is ready for a controlled private beta with safer persistence, tested flows and clear limitations.
+
+### E8-F1 — Backend Persistence Baseline
+
+**Status:** Todo
+
+- [ ] Define persistence repositories for tax profile, records and audit events.
+- [ ] Add authenticated ownership checks before storing user data.
+- [ ] Persist tax-impacting audit events.
+- [ ] Document migration and rollback plan.
+
+### E8-F2 — API Contract Tests
+
+**Status:** Todo
+
+- [ ] Add assistant endpoint contract tests.
+- [ ] Add tax estimate endpoint contract tests.
+- [ ] Add audit payload assertions for tax estimates.
+- [ ] Add error response shape tests.
+
+### E8-F3 — Mobile Private Beta QA
+
+**Status:** Todo
+
+- [ ] Run onboarding in English and Turkish.
+- [ ] Run income, expense, transactions and estimate flows on device/simulator.
+- [ ] Check empty, loading and long-copy states.
+- [ ] Record private beta limitations and known gaps.
+
+### E8-F4 — Security and Privacy Gates
+
+**Status:** Todo
+
+- [ ] Add no-PII logging review checklist.
+- [ ] Add retention/deletion job design.
+- [ ] Review export previews for accidental PII leakage.
+- [ ] Prepare DPIA inputs for production launch.
