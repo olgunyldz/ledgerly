@@ -26,6 +26,8 @@ class AuditEventPayload(BaseModel):
     event_type: str
     entity_type: str
     entity_id: str | None
+    input_hash: str
+    rule_version: str | None
     metadata: dict[str, Any]
     created_at: str
 

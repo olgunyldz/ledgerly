@@ -23,11 +23,13 @@ def create_tax_estimate(payload: TaxEstimateRequest):
         event_type="tax_estimate.calculated",
         entity_type="tax_estimate",
         entity_id=None,
+        inputs=estimate["inputs_snapshot"],
+        rule_version=estimate["rule_version"],
         metadata={
             "tax_year": estimate["tax_year"],
             "rule_version": estimate["rule_version"],
-            "inputs_snapshot": estimate["inputs_snapshot"],
             "sources": estimate["sources"],
+            "input_fields": list(estimate["inputs_snapshot"].keys()),
         },
     )
 
@@ -49,6 +51,8 @@ def create_tax_estimate(payload: TaxEstimateRequest):
             "event_type": audit_event.event_type,
             "entity_type": audit_event.entity_type,
             "entity_id": audit_event.entity_id,
+            "input_hash": audit_event.input_hash,
+            "rule_version": audit_event.rule_version,
             "metadata": audit_event.metadata,
             "created_at": audit_event.created_at.isoformat(),
         },

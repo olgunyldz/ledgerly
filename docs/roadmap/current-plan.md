@@ -26,6 +26,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - `E5-F2`: Assistant Backend
 - `E6-F1`: Export Readiness
 - `E6-F2`: PDF and CSV Export
+- `E7-F1`: Privacy and Auditability
 - `E7-F2`: QA and Release baseline
 
 ### Done
@@ -60,11 +61,11 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Assistant backend exposes deterministic starter guardrails with prompt version, source contracts and high-risk escalation.
 - Accountant Pack readiness screen shows completeness checklist, risk flags and export confirmation requirement.
 - Accountant Pack now shows export data model, CSV summary preview, PDF summary preview and export history placeholder.
+- Privacy and audit baseline defines retention rules, privacy impact notes and audit input hashing for tax estimates.
 
 ### Next
 
-- Start `E7-F1`: Privacy and Auditability.
-- Add CI lint and test commands.
+- Continue `E7-F2`: QA and Release baseline.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
 ### Blocked
@@ -75,6 +76,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 
 - `BUG-001` remains deferred because the non-breaking audit fix is unavailable.
 - Tax-related screens must show calculation warnings and source references before presenting live estimates.
+- Production launch still needs DPIA, authenticated persistence and retention jobs.
 
 ## Milestone Checklist
 

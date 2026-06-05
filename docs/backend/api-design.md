@@ -94,6 +94,8 @@ Response:
     "event_type": "tax_estimate.calculated",
     "entity_type": "tax_estimate",
     "entity_id": null,
+    "input_hash": "sha256-hash",
+    "rule_version": "2025-26.0",
     "metadata": {}
   }
 }

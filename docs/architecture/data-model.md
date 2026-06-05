@@ -97,6 +97,7 @@ This is the target domain model. Implement progressively.
 - `rule_version`
 - `metadata_json`
 - `created_at`
+- `retention_until`
 
 ## Data design rules
 
@@ -104,3 +105,4 @@ This is the target domain model. Implement progressively.
 - Store tax-year-specific data separately.
 - Keep AI suggestions distinct from user-confirmed records.
 - Avoid overwriting tax-impacting data; prefer append-only revisions for confirmed records.
+- Store audit hashes alongside minimal metadata; avoid storing raw documents, prompts or full personal records in audit metadata.

@@ -302,12 +302,12 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E7-F1 — Privacy and Auditability
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Define minimum data retention rules.
-- [ ] Add audit event model.
-- [ ] Log tax-impacting calculation inputs and rule versions.
-- [ ] Document privacy impact notes.
+- [x] Define minimum data retention rules.
+- [x] Add audit event model.
+- [x] Log tax-impacting calculation inputs and rule versions.
+- [x] Document privacy impact notes.
 
 ### E7-F2 — QA and Release
 
