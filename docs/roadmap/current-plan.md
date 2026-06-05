@@ -22,6 +22,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 
 - Foundation Sprint 1 completed.
 - Backend persistence baseline added with in-memory repository boundaries, temporary user context and tax estimate audit event persistence.
+- API contract tests cover assistant responses, tax estimates, audit payloads and error response shape.
 - Ledgerly product identity established.
 - MVP user flow defined.
 - Temporary onboarding and dashboard flow scaffolded.
@@ -57,7 +58,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 
 ### Next
 
-- Start `E8-F2`: API Contract Tests.
+- Start `E8-F3`: Mobile Private Beta QA.
 - Run private beta QA checklist on device/simulator.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
@@ -89,7 +90,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - [x] Basic tax profile questionnaire
 - [x] Income and expense entry
 - [x] Deterministic tax estimate endpoint
-- [ ] Audit event persistence
+- [x] Audit event persistence
 - [x] Assistant chat placeholder with safe prompt
 - [x] Release checklist reviewed
 

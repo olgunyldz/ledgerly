@@ -32,6 +32,7 @@ workers/       async/background jobs
 - Tax calculations must call the rules package/service and include rule version in output.
 - `apps/api/app/services/tax_rules_service.py` is the temporary bridge to `packages/tax-rules` until a first-class package boundary is introduced.
 - `apps/api/app/services/assistant_guardrails.py` owns starter assistant risk classification, prompt version metadata and approved source contracts until RAG/LLM services exist.
+- `apps/api/app/core/errors.py` owns stable API error envelopes with machine-readable `code`, localisable `message_key` and JSON-safe `detail`.
 
 ## Private beta persistence baseline
 
@@ -51,4 +52,4 @@ workers/       async/background jobs
 - 422: validation error
 - 500: unexpected server error
 
-All API errors should return a stable machine-readable `code` and a localisable `message_key`.
+All API errors should return a stable machine-readable `code`, a localisable `message_key` and JSON-safe `detail`.

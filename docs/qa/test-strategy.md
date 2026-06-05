@@ -49,6 +49,9 @@ Run before merging private beta work:
 - `cd apps/mobile && npm run typecheck`
 - `cd packages/tax-rules && npm test`
 - `python3 -m compileall apps/api/app`
+- `PYTHONPATH=apps/api python3 -m pytest apps/api/tests`
+
+API contract tests require Python 3.12 or 3.13 because the current FastAPI/Pydantic pin does not support Python 3.14. If local `python3` is newer, run `LEDGERLY_API_PYTHON=/path/to/python3.12 bash scripts/qa-baseline.sh`.
 
 ## Multilingual QA
 

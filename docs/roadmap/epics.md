@@ -346,12 +346,12 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E8-F2 — API Contract Tests
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Add assistant endpoint contract tests.
-- [ ] Add tax estimate endpoint contract tests.
-- [ ] Add audit payload assertions for tax estimates.
-- [ ] Add error response shape tests.
+- [x] Add assistant endpoint contract tests.
+- [x] Add tax estimate endpoint contract tests.
+- [x] Add audit payload assertions for tax estimates.
+- [x] Add error response shape tests.
 
 ### E8-F3 — Mobile Private Beta QA
 

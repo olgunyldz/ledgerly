@@ -109,6 +109,24 @@ Response:
 
 The endpoint only supports `profile_type: "self_employed"` until additional deterministic rule coverage exists. It calls the shared tax rules package through `apps/api/app/services/tax_rules_service.py`, persists an in-memory private-beta audit event through `apps/api/app/repositories/audit_events.py`, and returns an audit event payload for client visibility.
 
+## Error responses
+
+All API errors return a stable machine-readable code and localisable message key:
+
+```json
+{
+  "code": "validation_error",
+  "message_key": "error.validation",
+  "detail": []
+}
+```
+
+Current private-beta contracts:
+
+- `401 unauthenticated` with `error.unauthenticated` when `X-Ledgerly-User-Id` is missing from authenticated private-beta endpoints.
+- `422 validation_error` with `error.validation` for request schema and business validation failures.
+- `http_error` with `error.http` for other handled HTTP exceptions until endpoint-specific codes are introduced.
+
 ## Versioning
 
 Breaking API changes require a new route version or compatibility adapter.

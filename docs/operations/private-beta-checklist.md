@@ -7,6 +7,7 @@ Use this before inviting private beta users.
 - [ ] Mobile `npm run typecheck` passes.
 - [ ] Tax rules `npm test` passes.
 - [ ] API `python3 -m compileall apps/api/app` passes.
+- [ ] API contract tests pass.
 - [ ] Assistant evaluation fixture JSON validates.
 - [ ] `scripts/qa-baseline.sh` passes locally.
 - [ ] GitHub Actions CI is green on the branch or PR.
