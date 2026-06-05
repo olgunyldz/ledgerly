@@ -44,7 +44,7 @@ Use `docs/roadmap/epics.md` as the structured epic -> feature -> task backlog. U
 ## Engineering chores
 
 - [ ] Add pre-commit hooks.
-- [ ] Add API contract tests.
+- [x] Add API contract tests.
 - [ ] Add mobile component storybook or preview harness.
 - [ ] Add visual regression snapshots for key screens.
 - [ ] Add error monitoring.

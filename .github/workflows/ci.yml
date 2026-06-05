@@ -42,4 +42,5 @@ jobs:
           python-version: "3.12"
       - run: python -m pip install -r apps/api/requirements.txt
       - run: python -m compileall apps/api/app
+      - run: PYTHONPATH=apps/api python -m pytest apps/api/tests
       - run: python -m json.tool docs/ai/evaluation-fixtures/assistant-baseline.json
