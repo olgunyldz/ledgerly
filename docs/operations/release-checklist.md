@@ -19,7 +19,8 @@
 
 - [ ] Tax rule changes reviewed.
 - [ ] Rule version updated where needed.
-- [ ] Audit logging verified.
+- [x] Audit event model includes input hash and rule version.
+- [ ] Audit persistence verified.
 - [ ] High-risk assistant escalation tested.
 - [ ] Accountant pack export remains gated behind explicit user confirmation.
 - [ ] Export previews checked for accidental PII leakage before file generation is enabled.
@@ -30,6 +31,7 @@
 - [ ] Logs checked for PII leakage.
 - [ ] Auth and authorisation smoke tests pass.
 - [ ] Document access is private.
+- [ ] Retention/deletion jobs reviewed before production.
 
 ## Release operations
 

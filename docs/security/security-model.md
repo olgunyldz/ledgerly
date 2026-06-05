@@ -32,9 +32,27 @@
 
 ## Privacy checklist
 
-- [ ] Map personal data processed.
-- [ ] Define lawful basis.
-- [ ] Minimise stored fields.
-- [ ] Define retention periods.
+- [x] Map personal data processed.
+- [x] Define lawful basis.
+- [x] Minimise stored fields.
+- [x] Define retention periods.
 - [ ] Support export and deletion requests.
 - [ ] Complete DPIA before production launch.
+
+## Minimum data retention rules
+
+| Data category | Default retention | Notes |
+|---|---:|---|
+| Draft onboarding preferences | Until user deletes workspace | Keep minimal language/setup flags only. |
+| Income and expense records | 7 tax years after tax year end | User can delete draft records before export/submission. |
+| Uploaded documents | 7 tax years after tax year end | Store privately; use signed URLs and access logs. |
+| Tax estimate audit events | 7 tax years after tax year end | Store input hash, rule version and minimal metadata. |
+| Assistant messages | 24 months by default | Shorten or delete on user request where legally allowed. |
+| Operational logs | 30 days | No personal tax data, prompts, documents or record contents. |
+
+## Audit logging rules
+
+- Tax-impacting calculations must store `input_hash`, `rule_version`, event type and source metadata.
+- Audit metadata must avoid raw document text, full prompts, tokens, secrets and unnecessary personal data.
+- User-confirmed export/submission flows must create explicit confirmation audit events before any external action.
+- Audit records are append-only; corrections create a new event rather than overwriting prior events.

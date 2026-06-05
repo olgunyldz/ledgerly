@@ -45,6 +45,7 @@
 ## Operations, QA and Security
 
 - `security/security-model.md`
+- `security/privacy-impact-notes.md`
 - `qa/test-strategy.md`
 - `qa/multilingual-copy-checklist.md`
 - `operations/release-checklist.md`

@@ -12,6 +12,7 @@ Use `docs/roadmap/epics.md` as the structured epic -> feature -> task backlog. U
 - [ ] Implement backend tax estimate endpoint.
 - [ ] Add deterministic tests for tax rules.
 - [ ] Add audit event persistence.
+- [x] Define audit event input hash and rule version payload.
 - [ ] Add assistant chat screen.
 - [ ] Add safe assistant system prompt.
 - [ ] Add privacy-first analytics events.
