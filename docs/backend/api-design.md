@@ -59,6 +59,12 @@ The starter assistant backend is deterministic guardrail logic only. It classifi
 
 `POST /v1/tax-estimates`
 
+Headers:
+
+```text
+X-Ledgerly-User-Id: private-beta-user-id
+```
+
 Request:
 
 ```json
@@ -101,7 +107,7 @@ Response:
 }
 ```
 
-The endpoint only supports `profile_type: "self_employed"` until additional deterministic rule coverage exists. It calls the shared tax rules package through `apps/api/app/services/tax_rules_service.py`, and returns an audit event payload for persistence by the future audit repository.
+The endpoint only supports `profile_type: "self_employed"` until additional deterministic rule coverage exists. It calls the shared tax rules package through `apps/api/app/services/tax_rules_service.py`, persists an in-memory private-beta audit event through `apps/api/app/repositories/audit_events.py`, and returns an audit event payload for client visibility.
 
 ## Versioning
 

@@ -24,7 +24,7 @@ Use this before inviting private beta users.
 
 - [ ] No secrets or personal data are committed.
 - [ ] Logs do not include tax records, prompts, documents or tokens.
-- [ ] Audit event payloads include input hash and rule version.
+- [x] Audit event payloads include input hash and rule version.
 - [ ] Privacy impact notes and retention rules are reviewed.
 - [ ] Known security bugs are listed in `docs/roadmap/epics.md`.
 

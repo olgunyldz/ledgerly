@@ -9,7 +9,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 | Name | Private Beta Hardening Sprint 1 |
 | Goal | Move Ledgerly from MVP skeleton to private-beta-ready persistence, contracts and QA gates |
 | Milestone | Private Beta |
-| Status | Planned |
+| Status | In Progress |
 
 ### Committed Scope
 
@@ -21,6 +21,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 ### Done
 
 - Foundation Sprint 1 completed.
+- Backend persistence baseline added with in-memory repository boundaries, temporary user context and tax estimate audit event persistence.
 - Ledgerly product identity established.
 - MVP user flow defined.
 - Temporary onboarding and dashboard flow scaffolded.
@@ -56,8 +57,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 
 ### Next
 
-- Start `E8-F1`: Backend Persistence Baseline.
-- Add API contract tests after persistence boundaries are clearer.
+- Start `E8-F2`: API Contract Tests.
 - Run private beta QA checklist on device/simulator.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
