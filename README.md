@@ -52,6 +52,7 @@ Start here:
 - `docs/roadmap/tasks.md` — task backlog
 - `docs/security/security-model.md` — security and privacy model
 - `docs/operations/release-checklist.md` — release checklist
+- `docs/operations/private-beta-checklist.md` — private beta checklist
 
 ## Quick start
 
@@ -79,6 +80,12 @@ uvicorn app.main:app --reload --port 8000
 cd packages/tax-rules
 npm install
 npm test
+```
+
+### QA baseline
+
+```bash
+bash scripts/qa-baseline.sh
 ```
 
 ## Development rules

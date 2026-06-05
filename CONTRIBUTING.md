@@ -5,7 +5,7 @@
 1. Create a feature branch.
 2. Update code and relevant docs.
 3. Add or update tests.
-4. Run checks locally.
+4. Run checks locally with `bash scripts/qa-baseline.sh`.
 5. Open PR using the pull request template.
 
 ## Required docs updates

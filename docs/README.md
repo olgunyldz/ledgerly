@@ -49,6 +49,7 @@
 - `qa/test-strategy.md`
 - `qa/multilingual-copy-checklist.md`
 - `operations/release-checklist.md`
+- `operations/private-beta-checklist.md`
 - `compliance-checklist.md`
 - `roadmap/roadmap.md`
 - `roadmap/epics.md`

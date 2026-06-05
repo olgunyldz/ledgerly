@@ -311,12 +311,12 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E7-F2 — QA and Release
 
-**Status:** In Progress
+**Status:** Done
 
 - [x] Install mobile dependencies.
 - [x] Restore `npm run typecheck`.
-- [ ] Add CI lint and test commands.
-- [ ] Add private beta release checklist.
+- [x] Add CI lint and test commands.
+- [x] Add private beta release checklist.
 
 ### E7-F3 — Backlog Hygiene
 
