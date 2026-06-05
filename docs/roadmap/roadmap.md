@@ -18,6 +18,9 @@
 - Basic tax estimate endpoint
 - Assistant chat UI
 - Audit event model
+- Backend persistence baseline
+- API contract tests
+- Private beta QA gates
 
 ## Phase 2 — Documents and Accountant Pack
 

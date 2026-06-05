@@ -6,31 +6,21 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 
 | Field | Value |
 |---|---|
-| Name | Foundation Sprint 1 |
-| Goal | Turn Ledgerly from a documented concept into a navigable mobile MVP skeleton with project tracking discipline |
-| Milestone | Foundation |
-| Status | Done |
+| Name | Private Beta Hardening Sprint 1 |
+| Goal | Move Ledgerly from MVP skeleton to private-beta-ready persistence, contracts and QA gates |
+| Milestone | Private Beta |
+| Status | Planned |
 
 ### Committed Scope
 
-- `E1-F3`: Navigation Shell
-- `E2-F1`: Language Selection
-- `E2-F3`: Starter Dashboard
-- `E3-F1`: Income Records
-- `E3-F2`: Expense Records
-- `E3-F3`: Document Intake
-- `E4-F1`: Tax Rules Package
-- `E4-F2`: Estimate API
-- `E4-F3`: Mobile Estimate View
-- `E5-F1`: Assistant UI
-- `E5-F2`: Assistant Backend
-- `E6-F1`: Export Readiness
-- `E6-F2`: PDF and CSV Export
-- `E7-F1`: Privacy and Auditability
-- `E7-F2`: QA and Release baseline
+- `E8-F1`: Backend Persistence Baseline
+- `E8-F2`: API Contract Tests
+- `E8-F3`: Mobile Private Beta QA
+- `E8-F4`: Security and Privacy Gates
 
 ### Done
 
+- Foundation Sprint 1 completed.
 - Ledgerly product identity established.
 - MVP user flow defined.
 - Temporary onboarding and dashboard flow scaffolded.
@@ -66,7 +56,9 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 
 ### Next
 
-- Start next milestone planning.
+- Start `E8-F1`: Backend Persistence Baseline.
+- Add API contract tests after persistence boundaries are clearer.
+- Run private beta QA checklist on device/simulator.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
 ### Blocked
@@ -94,12 +86,12 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 ### Private Beta
 
 - [x] Persistent onboarding state
-- [ ] Basic tax profile questionnaire
-- [ ] Income and expense entry
-- [ ] Deterministic tax estimate endpoint
+- [x] Basic tax profile questionnaire
+- [x] Income and expense entry
+- [x] Deterministic tax estimate endpoint
 - [ ] Audit event persistence
-- [ ] Assistant chat placeholder with safe prompt
-- [ ] Release checklist reviewed
+- [x] Assistant chat placeholder with safe prompt
+- [x] Release checklist reviewed
 
 ### MVP Launch
 
