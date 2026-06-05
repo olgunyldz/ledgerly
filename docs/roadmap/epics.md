@@ -289,12 +289,12 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E6-F2 — PDF and CSV Export
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Define export data model.
-- [ ] Generate CSV summary.
-- [ ] Generate PDF summary.
-- [ ] Add export history placeholder.
+- [x] Define export data model.
+- [x] Generate CSV summary.
+- [x] Generate PDF summary.
+- [x] Add export history placeholder.
 
 ## E7 — Security, Privacy and Release Readiness
 

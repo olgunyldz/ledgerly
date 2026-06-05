@@ -22,6 +22,7 @@
 - [ ] Audit logging verified.
 - [ ] High-risk assistant escalation tested.
 - [ ] Accountant pack export remains gated behind explicit user confirmation.
+- [ ] Export previews checked for accidental PII leakage before file generation is enabled.
 
 ## Security/privacy
 

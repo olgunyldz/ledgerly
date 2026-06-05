@@ -44,6 +44,7 @@ features/transactions
 - Draft expense records: AsyncStorage via `apps/mobile/src/lib/expenseRecords.ts` until backend persistence exists.
 - Tax estimate preview state: derived from local records via `apps/mobile/src/lib/taxEstimate.ts` until mobile is wired to `POST /v1/tax-estimates`.
 - Export readiness state: derived from local record summaries via `apps/mobile/src/lib/exportReadiness.ts` until export APIs exist.
+- Export pack preview state: derived from local records via `apps/mobile/src/lib/exportPack.ts` until PDF/CSV generation APIs exist.
 - Do not duplicate backend tax calculations in mobile state.
 
 ## Navigation

@@ -25,6 +25,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - `E5-F1`: Assistant UI
 - `E5-F2`: Assistant Backend
 - `E6-F1`: Export Readiness
+- `E6-F2`: PDF and CSV Export
 - `E7-F2`: QA and Release baseline
 
 ### Done
@@ -58,10 +59,11 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Assistant UI shows starter questions, source chips and high-risk accountant review prompt.
 - Assistant backend exposes deterministic starter guardrails with prompt version, source contracts and high-risk escalation.
 - Accountant Pack readiness screen shows completeness checklist, risk flags and export confirmation requirement.
+- Accountant Pack now shows export data model, CSV summary preview, PDF summary preview and export history placeholder.
 
 ### Next
 
-- Start `E6-F2`: PDF and CSV Export.
+- Start `E7-F1`: Privacy and Auditability.
 - Add CI lint and test commands.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 

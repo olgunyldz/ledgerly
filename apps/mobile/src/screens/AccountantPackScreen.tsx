@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, View, Text, Pressable, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { getExportPackSummary, type ExportPackSummary } from '../lib/exportPack';
 import { getExportReadiness, type ExportReadiness } from '../lib/exportReadiness';
 import type { RootStackParamList } from '../navigation/routes';
 import { colors, radius, spacing, typography } from '../theme/tokens';
@@ -15,11 +16,13 @@ type ChecklistItem = {
 
 export function AccountantPackScreen({ navigation }: AccountantPackScreenProps) {
   const { t } = useTranslation();
+  const [packSummary, setPackSummary] = React.useState<ExportPackSummary | null>(null);
   const [readiness, setReadiness] = React.useState<ExportReadiness | null>(null);
 
   React.useEffect(() => {
     const unsubscribe = navigation.addListener('focus', () => {
       getExportReadiness().then(setReadiness);
+      getExportPackSummary().then(setPackSummary);
     });
 
     return unsubscribe;
@@ -63,6 +66,30 @@ export function AccountantPackScreen({ navigation }: AccountantPackScreenProps) 
         <Text style={styles.muted}>{t('exportConfirmationBody')}</Text>
       </View>
 
+      <View style={styles.card}>
+        <Text style={styles.sectionTitle}>{t('exportDataModelTitle')}</Text>
+        <Text style={styles.line}>{t('profileTaxYear')}: {packSummary?.taxYear ?? t('profileMissing')}</Text>
+        <Text style={styles.line}>{t('exportRecordCount')}: {packSummary?.records.length ?? 0}</Text>
+        <Text style={styles.line}>{t('exportGeneratedAt')}: {packSummary?.generatedAt ?? t('profileMissing')}</Text>
+      </View>
+
+      <View style={styles.card}>
+        <Text style={styles.sectionTitle}>{t('exportCsvPreviewTitle')}</Text>
+        <Text style={styles.codeLine}>{packSummary?.csvPreview || t('exportNoRecords')}</Text>
+      </View>
+
+      <View style={styles.card}>
+        <Text style={styles.sectionTitle}>{t('exportPdfPreviewTitle')}</Text>
+        {packSummary?.pdfSections.map((section) => (
+          <Text key={section} style={styles.line}>{section}</Text>
+        )) ?? <Text style={styles.muted}>{t('restoringPreferences')}</Text>}
+      </View>
+
+      <View style={styles.card}>
+        <Text style={styles.sectionTitle}>{t('exportHistoryTitle')}</Text>
+        <Text style={styles.muted}>{t('exportHistoryEmpty')}</Text>
+      </View>
+
       <Pressable accessibilityRole="button" style={styles.disabledButton}>
         <Text style={styles.disabledButtonText}>{t('exportDisabled')}</Text>
       </Pressable>
@@ -101,7 +128,9 @@ const styles = StyleSheet.create({
   ready: { backgroundColor: colors.ledgerGreen },
   missing: { backgroundColor: colors.amber },
   checkText: { color: colors.ink, flex: 1, fontSize: typography.body, lineHeight: 22 },
+  line: { color: colors.slate, fontSize: typography.body, lineHeight: 26 },
   muted: { color: colors.slate, fontSize: typography.body, lineHeight: 22 },
+  codeLine: { color: colors.ink, fontSize: typography.caption, lineHeight: 20 },
   warningCard: {
     backgroundColor: colors.surface,
     borderColor: colors.amber,
