@@ -20,6 +20,7 @@ import { TransactionsScreen } from '../screens/TransactionsScreen';
 import { DocumentsScreen } from '../screens/DocumentsScreen';
 import { DocumentReviewScreen } from '../screens/DocumentReviewScreen';
 import { TaxEstimateScreen } from '../screens/TaxEstimateScreen';
+import { AccountantPackScreen } from '../screens/AccountantPackScreen';
 import { AddIncomeScreen } from '../screens/AddIncomeScreen';
 import { AddExpenseScreen } from '../screens/AddExpenseScreen';
 import { getSetupComplete, getStoredLanguage, setSetupComplete } from '../lib/preferences';
@@ -106,6 +107,7 @@ export function AppNavigator() {
         <Stack.Screen name="Documents" component={DocumentsScreen} options={{ title: t('documentsTitle') }} />
         <Stack.Screen name="DocumentReview" component={DocumentReviewScreen} options={{ title: t('documentReviewTitle') }} />
         <Stack.Screen name="TaxEstimate" component={TaxEstimateScreen} options={{ title: t('taxEstimateTitle') }} />
+        <Stack.Screen name="AccountantPack" component={AccountantPackScreen} options={{ title: t('accountantPackTitle') }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
