@@ -22,7 +22,7 @@
 - [ ] Tax rule changes reviewed.
 - [ ] Rule version updated where needed.
 - [x] Audit event model includes input hash and rule version.
-- [ ] Audit persistence verified.
+- [x] Private-beta audit persistence baseline verified.
 - [ ] High-risk assistant escalation tested.
 - [ ] Accountant pack export remains gated behind explicit user confirmation.
 - [ ] Export previews checked for accidental PII leakage before file generation is enabled.

@@ -99,6 +99,14 @@ This is the target domain model. Implement progressively.
 - `created_at`
 - `retention_until`
 
+## Repository boundaries
+
+- Tax profiles: `apps/api/app/repositories/tax_profiles.py`
+- Income and expense records: `apps/api/app/repositories/records.py`
+- Audit events: `apps/api/app/repositories/audit_events.py`
+
+These are in-memory private-beta scaffolds. Production persistence should replace them with database-backed repositories while keeping ownership checks at the repository boundary.
+
 ## Data design rules
 
 - Store money in minor units where practical, or use decimal types with explicit currency.

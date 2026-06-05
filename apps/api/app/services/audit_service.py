@@ -7,6 +7,7 @@ from typing import Any
 
 @dataclass
 class AuditEvent:
+    user_id: str
     event_type: str
     entity_type: str
     entity_id: str | None
@@ -23,6 +24,7 @@ def hash_audit_inputs(inputs: dict[str, Any]) -> str:
 
 def build_audit_event(
     *,
+    user_id: str,
     event_type: str,
     entity_type: str,
     entity_id: str | None,
@@ -31,6 +33,7 @@ def build_audit_event(
     rule_version: str | None = None,
 ) -> AuditEvent:
     return AuditEvent(
+        user_id=user_id,
         event_type=event_type,
         entity_type=entity_type,
         entity_id=entity_id,

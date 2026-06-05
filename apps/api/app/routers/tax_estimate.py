@@ -1,5 +1,8 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 
+from app.core.auth import get_current_user_id
+from app.models.persistence import AuditEventRecord
+from app.repositories.audit_events import audit_event_repository
 from app.schemas.tax_estimate import TaxEstimateRequest, TaxEstimateResponse
 from app.services.audit_service import build_audit_event
 from app.services.tax_rules_service import TaxRulesServiceError, estimate_self_employed_reserve
@@ -8,7 +11,7 @@ router = APIRouter()
 
 
 @router.post("", response_model=TaxEstimateResponse)
-def create_tax_estimate(payload: TaxEstimateRequest):
+def create_tax_estimate(payload: TaxEstimateRequest, user_id: str = Depends(get_current_user_id)):
     taxable_profit = round(payload.income - payload.expenses, 2)
 
     try:
@@ -20,6 +23,7 @@ def create_tax_estimate(payload: TaxEstimateRequest):
         raise HTTPException(status_code=422, detail=str(exc)) from exc
 
     audit_event = build_audit_event(
+        user_id=user_id,
         event_type="tax_estimate.calculated",
         entity_type="tax_estimate",
         entity_id=None,
@@ -31,6 +35,18 @@ def create_tax_estimate(payload: TaxEstimateRequest):
             "sources": estimate["sources"],
             "input_fields": list(estimate["inputs_snapshot"].keys()),
         },
+    )
+    audit_event_repository.add(
+        AuditEventRecord(
+            user_id=audit_event.user_id,
+            event_type=audit_event.event_type,
+            entity_type=audit_event.entity_type,
+            entity_id=audit_event.entity_id,
+            input_hash=audit_event.input_hash,
+            rule_version=audit_event.rule_version,
+            metadata=audit_event.metadata,
+            created_at=audit_event.created_at,
+        )
     )
 
     return TaxEstimateResponse(

@@ -337,12 +337,12 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E8-F1 — Backend Persistence Baseline
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Define persistence repositories for tax profile, records and audit events.
-- [ ] Add authenticated ownership checks before storing user data.
-- [ ] Persist tax-impacting audit events.
-- [ ] Document migration and rollback plan.
+- [x] Define persistence repositories for tax profile, records and audit events.
+- [x] Add authenticated ownership checks before storing user data.
+- [x] Persist tax-impacting audit events.
+- [x] Document migration and rollback plan.
 
 ### E8-F2 — API Contract Tests
 

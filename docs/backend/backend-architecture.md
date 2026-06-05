@@ -27,10 +27,19 @@ workers/       async/background jobs
 - Routers should not contain business logic.
 - Services should be testable without HTTP.
 - Repositories should hide persistence details.
+- Repositories must enforce user ownership before returning stored records.
 - External integrations must be behind interfaces.
 - Tax calculations must call the rules package/service and include rule version in output.
 - `apps/api/app/services/tax_rules_service.py` is the temporary bridge to `packages/tax-rules` until a first-class package boundary is introduced.
 - `apps/api/app/services/assistant_guardrails.py` owns starter assistant risk classification, prompt version metadata and approved source contracts until RAG/LLM services exist.
+
+## Private beta persistence baseline
+
+- `apps/api/app/repositories/base.py` provides in-memory user-owned repository behaviour for private beta scaffolding.
+- `apps/api/app/repositories/tax_profiles.py` defines the tax profile repository boundary.
+- `apps/api/app/repositories/records.py` defines income and expense repository boundaries.
+- `apps/api/app/repositories/audit_events.py` stores tax-impacting audit events in memory until database persistence lands.
+- `apps/api/app/core/auth.py` reads `X-Ledgerly-User-Id` as temporary private-beta user context; production auth must replace it.
 
 ## Error strategy
 
