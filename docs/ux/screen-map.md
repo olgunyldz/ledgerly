@@ -52,7 +52,7 @@ After setup, the primary app loop is `Dashboard` -> `Transactions` / `Documents`
 | Documents | Uploaded documents | empty state, receipt upload placeholder, confirmation rule |
 | Document Review | Confirm extracted data | extracted field placeholder, confirmation warning |
 | Tax Estimate | Explain estimate | taxable profit preview, record breakdown, assumptions, API payload caveat |
-| Accountant Pack | Export summary | readiness checklist, missing record flags, high-risk assumptions, confirmation gate |
+| Accountant Pack | Export summary | readiness checklist, CSV/PDF previews, export history placeholder, confirmation gate |
 | Deadlines | Show upcoming obligations | deadline list, reminders |
 | Settings | Account and preferences | language, privacy, export/delete data |
 

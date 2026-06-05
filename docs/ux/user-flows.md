@@ -65,9 +65,10 @@ Ledgerly's first build should prioritise a complete, narrow loop over broad feat
 1. User chooses tax year.
 2. App displays completeness checklist.
 3. App highlights missing records, unreviewed documents and high-risk assumptions.
-4. App explains that PDF/CSV generation is disabled until explicit confirmation and export services are connected.
-5. Future backend flow requires user confirmation before generating PDF and CSV.
-6. User downloads or shares pack after export generation is connected.
+4. App shows export data model, CSV summary preview and PDF summary preview.
+5. App shows export history placeholder.
+6. App explains that file generation remains disabled until explicit confirmation and export services are connected.
+7. Future backend flow requires user confirmation before generating PDF and CSV.
 
 ## Preview tax estimate
 
