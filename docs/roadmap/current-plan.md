@@ -9,7 +9,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 | Name | Foundation Sprint 1 |
 | Goal | Turn Ledgerly from a documented concept into a navigable mobile MVP skeleton with project tracking discipline |
 | Milestone | Foundation |
-| Status | In Progress |
+| Status | Done |
 
 ### Committed Scope
 
@@ -62,10 +62,11 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Accountant Pack readiness screen shows completeness checklist, risk flags and export confirmation requirement.
 - Accountant Pack now shows export data model, CSV summary preview, PDF summary preview and export history placeholder.
 - Privacy and audit baseline defines retention rules, privacy impact notes and audit input hashing for tax estimates.
+- QA baseline script, CI jobs and private beta checklist added.
 
 ### Next
 
-- Continue `E7-F2`: QA and Release baseline.
+- Start next milestone planning.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
 ### Blocked
@@ -88,6 +89,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - [x] Canonical backlog and bug tracking rules
 - [x] React Navigation shell
 - [x] Mobile dependency install and typecheck restoration
+- [x] QA baseline script and CI checks
 
 ### Private Beta
 

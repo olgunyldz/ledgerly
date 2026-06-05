@@ -26,6 +26,7 @@ Who benefits and how?
 
 ## Tests
 
+- [ ] `bash scripts/qa-baseline.sh`
 - [ ] Unit tests
 - [ ] Integration tests
 - [ ] Manual QA

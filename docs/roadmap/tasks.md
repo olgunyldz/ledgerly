@@ -16,7 +16,7 @@ Use `docs/roadmap/epics.md` as the structured epic -> feature -> task backlog. U
 - [ ] Add assistant chat screen.
 - [ ] Add safe assistant system prompt.
 - [ ] Add privacy-first analytics events.
-- [ ] Add CI lint/test checks.
+- [x] Add CI lint/test checks.
 
 ## P1 — Should have for MVP launch
 

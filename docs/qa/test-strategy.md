@@ -41,6 +41,15 @@ Required:
 - Long translated strings.
 - Dark mode when supported.
 
+## Baseline commands
+
+Run before merging private beta work:
+
+- `bash scripts/qa-baseline.sh`
+- `cd apps/mobile && npm run typecheck`
+- `cd packages/tax-rules && npm test`
+- `python3 -m compileall apps/api/app`
+
 ## Multilingual QA
 
 Use `docs/qa/multilingual-copy-checklist.md` for onboarding, assistant and tax-sensitive copy changes.

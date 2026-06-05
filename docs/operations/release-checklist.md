@@ -2,11 +2,13 @@
 
 ## Code quality
 
+- [ ] `scripts/qa-baseline.sh` passes.
 - [ ] Type checks pass.
 - [ ] Unit tests pass.
 - [ ] Integration tests pass.
 - [ ] Mobile build succeeds.
 - [ ] API container builds.
+- [ ] GitHub Actions CI is green.
 
 ## Product quality
 
