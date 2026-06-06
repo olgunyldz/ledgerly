@@ -20,6 +20,14 @@ export type ExpenseSummary = {
 
 const expenseRecordsKey = 'ledgerly.expenseRecords';
 
+export function getExpenseBusinessUsePercentage(record: ExpenseRecord): number {
+  return record.businessUsePercentage ?? 100;
+}
+
+export function getAllowableExpensePence(record: ExpenseRecord): number {
+  return Math.round((record.amountPence * getExpenseBusinessUsePercentage(record)) / 100);
+}
+
 export async function getExpenseRecords(): Promise<ExpenseRecord[]> {
   const value = await AsyncStorage.getItem(expenseRecordsKey);
 
@@ -51,6 +59,6 @@ export async function getExpenseSummary(): Promise<ExpenseSummary> {
   const records = await getExpenseRecords();
   return {
     count: records.length,
-    totalPence: records.reduce((total, record) => total + record.amountPence, 0),
+    totalPence: records.reduce((total, record) => total + getAllowableExpensePence(record), 0),
   };
 }

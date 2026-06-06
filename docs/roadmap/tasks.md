@@ -17,6 +17,7 @@ Use `docs/roadmap/epics.md` as the structured epic -> feature -> task backlog. U
 - [x] Add safe assistant system prompt.
 - [ ] Add privacy-first analytics events.
 - [x] Add CI lint/test checks.
+- [ ] Complete device/simulator private beta mobile QA.
 
 ## P1 — Should have for MVP launch
 
@@ -45,6 +46,7 @@ Use `docs/roadmap/epics.md` as the structured epic -> feature -> task backlog. U
 
 - [ ] Add pre-commit hooks.
 - [x] Add API contract tests.
+- [x] Fix mixed-use expense totals in mobile estimate/export previews.
 - [ ] Add mobile component storybook or preview harness.
 - [ ] Add visual regression snapshots for key screens.
 - [ ] Add error monitoring.

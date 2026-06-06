@@ -4,11 +4,11 @@ Use this before inviting private beta users.
 
 ## Build and Test
 
-- [ ] Mobile `npm run typecheck` passes.
-- [ ] Tax rules `npm test` passes.
-- [ ] API `python3 -m compileall apps/api/app` passes.
+- [x] Mobile `npm run typecheck` passes.
+- [x] Tax rules `npm test` passes.
+- [x] API `python3 -m compileall apps/api/app` passes.
 - [ ] API contract tests pass.
-- [ ] Assistant evaluation fixture JSON validates.
+- [x] Assistant evaluation fixture JSON validates.
 - [ ] `scripts/qa-baseline.sh` passes locally.
 - [ ] GitHub Actions CI is green on the branch or PR.
 
@@ -19,7 +19,7 @@ Use this before inviting private beta users.
 - [ ] Income, expense and transactions flows work with empty and populated states.
 - [ ] Tax estimate preview shows warnings and source/API payload context.
 - [ ] Assistant UI and backend guardrails show high-risk escalation.
-- [ ] Accountant pack export remains disabled until explicit confirmation/export services exist.
+- [x] Accountant pack export remains disabled until explicit confirmation/export services exist.
 
 ## Privacy and Compliance
 
@@ -27,7 +27,7 @@ Use this before inviting private beta users.
 - [ ] Logs do not include tax records, prompts, documents or tokens.
 - [x] Audit event payloads include input hash and rule version.
 - [ ] Privacy impact notes and retention rules are reviewed.
-- [ ] Known security bugs are listed in `docs/roadmap/epics.md`.
+- [x] Known security bugs are listed in `docs/roadmap/epics.md`.
 
 ## Release Decision
 

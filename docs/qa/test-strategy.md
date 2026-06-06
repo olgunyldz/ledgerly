@@ -40,6 +40,9 @@ Required:
 - Offline state.
 - Long translated strings.
 - Dark mode when supported.
+- Mixed-use expense totals in Dashboard, Transactions, Tax Estimate and Accountant Pack.
+
+Current private beta mobile QA run notes live in `docs/qa/mobile-private-beta-qa.md`.
 
 ## Baseline commands
 
