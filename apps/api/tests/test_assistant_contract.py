@@ -33,7 +33,8 @@ def test_assistant_message_contract_high_risk_turkish():
     assert body["language"] == "tr"
     assert body["risk_level"] == "high"
     assert body["escalation_required"] is True
-    assert "muhasebeci" in body["answer"]
+    assert "accountant" in body["answer"]
+    assert "gözden geçirmeni öneririm" in body["answer"]
 
 
 def test_assistant_refusal_contract():
