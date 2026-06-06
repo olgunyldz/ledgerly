@@ -1,4 +1,8 @@
-import { getExpenseRecords } from './expenseRecords';
+import {
+  getAllowableExpensePence,
+  getExpenseBusinessUsePercentage,
+  getExpenseRecords,
+} from './expenseRecords';
 import { getIncomeRecords } from './incomeRecords';
 import { formatPenceAsPounds } from './money';
 import { getTaxEstimatePreview } from './taxEstimate';
@@ -53,9 +57,9 @@ export async function getExportPackSummary(): Promise<ExportPackSummary> {
     type: 'income',
   }));
   const expenseRows: ExportPackRecord[] = expenseRecords.map((record) => ({
-    amount: formatPenceAsPounds(record.amountPence),
+    amount: formatPenceAsPounds(getAllowableExpensePence(record)),
     date: record.date,
-    description: record.note || record.merchant,
+    description: `${record.note || record.merchant} (${getExpenseBusinessUsePercentage(record)}% business use)`,
     taxYear: record.taxYear,
     type: 'expense',
   }));

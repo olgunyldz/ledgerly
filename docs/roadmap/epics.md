@@ -119,6 +119,17 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 | Summary | `expo` pulls a transitive `uuid <11.1.1` advisory through `@expo/config-plugins` -> `xcode`; npm reports 10 moderate vulnerabilities. |
 | Next step | Re-check after Expo dependency policy is pinned; do not run `npm audit fix --force` because npm proposes a breaking Expo change. |
 
+#### BUG-002 — Mixed-use expenses counted at full amount in mobile estimate preview
+
+| Field | Value |
+|---|---|
+| Status | Fixed |
+| Severity | High |
+| Source | Agent discovery during `E8-F3` mobile private beta QA |
+| Affected area | Mobile, Tax estimate |
+| Summary | Mobile expense summaries, tax estimate preview and accountant pack export preview counted mixed-use expenses at full amount instead of applying `businessUsePercentage`. |
+| Next step | Verify on device/simulator once mobile manual QA is unblocked. |
+
 ## E1 — Product Identity and UX Foundation
 
 **Outcome:** Ledgerly has a clear product identity, route map and reusable mobile UX foundation.
@@ -355,12 +366,13 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E8-F3 — Mobile Private Beta QA
 
-**Status:** Todo
+**Status:** In Progress
 
-- [ ] Run onboarding in English and Turkish.
+- [ ] Run onboarding in English and Turkish on device/simulator.
 - [ ] Run income, expense, transactions and estimate flows on device/simulator.
-- [ ] Check empty, loading and long-copy states.
-- [ ] Record private beta limitations and known gaps.
+- [ ] Check empty, loading and long-copy states on device/simulator.
+- [x] Record private beta limitations and known gaps.
+- [x] Fix mixed-use expense totals discovered during QA.
 
 ### E8-F4 — Security and Privacy Gates
 

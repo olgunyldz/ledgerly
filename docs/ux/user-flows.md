@@ -27,9 +27,9 @@ Ledgerly's first build should prioritise a complete, narrow loop over broad feat
 4. App shows an official-term helper for allowable expenses.
 5. User reviews a human-readable summary.
 6. User saves expense as confirmed.
-7. Dashboard expense card updates with record count and total.
+7. Dashboard expense card updates with record count and business-use adjusted total.
 8. User can open `Transactions` to review saved expense records, totals, business-use percentages and notes.
-9. Tax estimate remains cautious until deterministic estimate logic is connected.
+9. Tax estimate preview uses only the business-use portion of mixed-use expenses.
 
 ## Add income manually
 
@@ -73,7 +73,7 @@ Ledgerly's first build should prioritise a complete, narrow loop over broad feat
 ## Preview tax estimate
 
 1. User taps the dashboard tax estimate card.
-2. App reads local income and expense totals.
+2. App reads local income and business-use adjusted expense totals.
 3. App shows taxable profit preview and record breakdown.
 4. App shows cautious estimate copy and notes that accountant review is still required.
 5. App previews the deterministic estimate API payload before live estimate display is connected.

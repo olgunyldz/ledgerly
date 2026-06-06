@@ -23,6 +23,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Foundation Sprint 1 completed.
 - Backend persistence baseline added with in-memory repository boundaries, temporary user context and tax estimate audit event persistence.
 - API contract tests cover assistant responses, tax estimates, audit payloads and error response shape.
+- Mobile private beta QA started; static checks passed and `BUG-002` mixed-use expense totals were fixed.
 - Ledgerly product identity established.
 - MVP user flow defined.
 - Temporary onboarding and dashboard flow scaffolded.
@@ -58,17 +59,19 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 
 ### Next
 
-- Start `E8-F3`: Mobile Private Beta QA.
-- Run private beta QA checklist on device/simulator.
+- Continue `E8-F3`: Mobile Private Beta QA on device/simulator.
+- Verify mixed-use expense totals on a device/simulator.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
 ### Blocked
 
-- No current Foundation blocker.
+- Device/simulator manual QA is blocked locally: no Android device is attached and iOS `CoreSimulatorService` is unavailable in this shell.
+- Local full `scripts/qa-baseline.sh` is blocked until `LEDGERLY_API_PYTHON` points to Python 3.12 or 3.13.
 
 ### Risks
 
 - `BUG-001` remains deferred because the non-breaking audit fix is unavailable.
+- `BUG-002` is fixed in code but still needs device/simulator verification.
 - Tax-related screens must show calculation warnings and source references before presenting live estimates.
 - Production launch still needs DPIA, authenticated persistence and retention jobs.
 
