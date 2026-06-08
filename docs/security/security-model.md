@@ -36,8 +36,12 @@
 - [x] Define lawful basis.
 - [x] Minimise stored fields.
 - [x] Define retention periods.
-- [ ] Support export and deletion requests.
-- [ ] Complete DPIA before production launch.
+- [x] Draft export and deletion request design.
+- [x] Draft DPIA inputs before production launch.
+- [ ] Implement export and deletion request flows.
+- [ ] Complete formal DPIA sign-off before production launch.
+
+Detailed private-beta gates are tracked in `docs/security/security-privacy-gates.md`. Retention and deletion jobs are designed in `docs/security/retention-deletion-design.md`. DPIA preparation inputs are in `docs/security/dpia-inputs.md`.
 
 ## Minimum data retention rules
 

@@ -30,7 +30,9 @@ Use `docs/roadmap/epics.md` as the structured epic -> feature -> task backlog. U
 - [ ] English + Turkish UI copy review.
 - [ ] Accessibility pass.
 - [ ] Error and empty states.
-- [ ] Security checklist completion.
+- [x] Security checklist completion.
+- [ ] Implement retention/deletion jobs.
+- [ ] Implement user export/delete flows.
 
 ## P2 — Growth features
 

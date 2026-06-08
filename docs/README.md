@@ -46,6 +46,9 @@
 
 - `security/security-model.md`
 - `security/privacy-impact-notes.md`
+- `security/security-privacy-gates.md`
+- `security/retention-deletion-design.md`
+- `security/dpia-inputs.md`
 - `qa/test-strategy.md`
 - `qa/multilingual-copy-checklist.md`
 - `operations/release-checklist.md`
