@@ -376,9 +376,9 @@ Add bugs here when they are discovered. Keep entries concise and actionable.
 
 ### E8-F4 — Security and Privacy Gates
 
-**Status:** Todo
+**Status:** Done
 
-- [ ] Add no-PII logging review checklist.
-- [ ] Add retention/deletion job design.
-- [ ] Review export previews for accidental PII leakage.
-- [ ] Prepare DPIA inputs for production launch.
+- [x] Add no-PII logging review checklist.
+- [x] Add retention/deletion job design.
+- [x] Review export previews for accidental PII leakage.
+- [x] Prepare DPIA inputs for production launch.

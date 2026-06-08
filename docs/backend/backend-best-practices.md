@@ -25,10 +25,13 @@ Log:
 
 Do not log:
 
+- raw income, expense, merchant or note fields
 - full document text
 - raw bank statements
 - tokens
 - passwords
+- signed URLs
+- export preview rows or generated file contents
 - sensitive AI prompts containing PII
 
 ## Testing

@@ -23,10 +23,10 @@ Use this before inviting private beta users.
 
 ## Privacy and Compliance
 
-- [ ] No secrets or personal data are committed.
-- [ ] Logs do not include tax records, prompts, documents or tokens.
+- [x] No secrets or personal data are committed.
+- [x] Logs do not include tax records, prompts, documents or tokens.
 - [x] Audit event payloads include input hash and rule version.
-- [ ] Privacy impact notes and retention rules are reviewed.
+- [x] Privacy impact notes and retention rules are reviewed.
 - [x] Known security bugs are listed in `docs/roadmap/epics.md`.
 
 ## Release Decision

@@ -25,16 +25,16 @@
 - [x] Audit event model includes input hash and rule version.
 - [x] Private-beta audit persistence baseline verified.
 - [x] High-risk assistant escalation contract tested.
-- [ ] Accountant pack export remains gated behind explicit user confirmation.
-- [ ] Export previews checked for accidental PII leakage before file generation is enabled.
+- [x] Accountant pack export remains gated behind explicit user confirmation.
+- [x] Export previews checked for accidental PII leakage before file generation is enabled.
 
 ## Security/privacy
 
-- [ ] No secrets committed.
-- [ ] Logs checked for PII leakage.
+- [x] No secrets committed.
+- [x] Logs checked for PII leakage.
 - [ ] Auth and authorisation smoke tests pass.
 - [ ] Document access is private.
-- [ ] Retention/deletion jobs reviewed before production.
+- [x] Retention/deletion jobs reviewed before production.
 
 ## Release operations
 

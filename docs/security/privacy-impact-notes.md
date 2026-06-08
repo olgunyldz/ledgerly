@@ -24,7 +24,13 @@ These notes cover the current private-beta skeleton: local mobile records, deter
 ## Open privacy work
 
 - Add authenticated backend persistence with ownership checks.
-- Add user export/delete flows.
-- Add production DPIA before launch.
+- Implement user export/delete flows from `docs/security/retention-deletion-design.md`.
+- Complete formal production DPIA sign-off using `docs/security/dpia-inputs.md`.
 - Add structured log redaction tests.
-- Add retention job design for expired records and assistant messages.
+- Implement retention jobs for expired records and assistant messages.
+
+## Private beta gate review
+
+- No active app logging of tax records was found during `E8-F4`.
+- Export file generation remains disabled; Accountant Pack shows local preview data only.
+- Known privacy blockers are documented in `docs/security/security-privacy-gates.md`.

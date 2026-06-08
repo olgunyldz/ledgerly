@@ -24,6 +24,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 - Backend persistence baseline added with in-memory repository boundaries, temporary user context and tax estimate audit event persistence.
 - API contract tests cover assistant responses, tax estimates, audit payloads and error response shape.
 - Mobile private beta QA started; static checks passed and `BUG-002` mixed-use expense totals were fixed.
+- Security/privacy gates completed with no-PII logging checklist, retention/deletion design, export preview PII review and DPIA inputs.
 - Ledgerly product identity established.
 - MVP user flow defined.
 - Temporary onboarding and dashboard flow scaffolded.
@@ -61,6 +62,7 @@ This file is the short-term delivery view. Use `docs/roadmap/epics.md` as the ca
 
 - Continue `E8-F3`: Mobile Private Beta QA on device/simulator.
 - Verify mixed-use expense totals on a device/simulator.
+- Decide whether to close Private Beta Hardening Sprint 1 with device QA blocked or unblock simulator/device QA first.
 - Re-check `BUG-001` when Expo dependency policy is pinned.
 
 ### Blocked
